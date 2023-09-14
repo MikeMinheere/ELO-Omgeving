@@ -1,0 +1,36 @@
+verschillende opdrachten
+taalblokken
+
+leerpad door kunnen lopen
+als er iets mist, komt dat duidelijk naar voren, per week
+progressie info per leerling dashboard
+
+overzicht is erg belangrijk
+
+planning zelf kunnen veranderen
+
+kijken of itslearning integratie
+
+kijken voor taalblokken API voor resultaten.
+taalblokken data goed trimmen.
+
+zelf opdrachten kunnen maken
+
+inlogmethodes:
+student,
+Docent,
+Beheerder
+
+dashboard voor studenten en leerlingen.
+
+pdf kunnen aanpassen/ omzetten
+
+engels techniek en media
+
+engels leeromgeving voor heel techniek en media, dus meerdere klassen en locaties
+
+Mappenstructuur zoals itsLearning
+
+on the go wijzigingen maken, bijv een opdracht niet mee laten tellen. per klas per opdracht.
+
+opdrachten bij de text zelf inleveren met bijv. een link naar inleverpunt
