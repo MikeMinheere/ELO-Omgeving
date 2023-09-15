@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->integer('pupil_number');
+            $table->integer('student_number');
             $table->string('class_name');
             $table->string('password');
             $table->rememberToken();
