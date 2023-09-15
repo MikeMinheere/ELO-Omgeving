@@ -15,6 +15,13 @@
             <x-text-input id="student_number" class="block mt-1 w-full" type="text" name="student_number" :value="old('student_number')" required autofocus autocomplete="student_number" />
             <x-input-error :messages="$errors->get('student_number')" class="mt-2" />
         </div>
+
+        <!-- class name -->
+        <div class="mt-4">
+            <x-input-label for="class_name" :value="__('Class Name')" />
+            <x-text-input id="class_name" class="block mt-1 w-full" type="text" name="class_name" :value="old('class_name')" required autofocus autocomplete="class_name" />
+            <x-input-error :messages="$errors->get('class_name')" class="mt-2" />
+        </div>
         
         <!-- Email Address -->
         <div class="mt-4">
