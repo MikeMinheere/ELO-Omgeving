@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/teacher', function () {
-    return view('auth/registerTeacher');
+    return view('auth/register-teacher');
 });
 
 Route::get('/dashboard', function () {
