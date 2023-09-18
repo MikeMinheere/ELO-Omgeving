@@ -1,5 +1,5 @@
 <div style="width: 1440px; height: 2092px; position: relative; background: white">
-  <div style="width: 1020px; left: 94px; top: 152px; position: absolute; color: black; font-size: 64px; font-family: Newsreader; font-weight: 400; line-height: 76.80px; word-wrap: break-word">Welkom docent</div>
+  <div style="width: 1020px; left: 94px; top: 152px; position: absolute; color: black; font-size: 64px; font-family: Newsreader; font-weight: 400; line-height: 76.80px; word-wrap: break-word">Welkom {{Auth::user()->name}}</div>
   <div style="padding-top: 6px; padding-bottom: 6px; padding-left: 44px; padding-right: 43px; left: 96px; top: 332px; position: absolute; background: #318D7E; border-radius: 8px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
     <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OPDRACHTEN</div>
     <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OVERZICHT</div>
