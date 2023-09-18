@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
-class RegisteredUserController extends Controller
+class RegisteredTeacherController extends Controller
 {
     /**
      * Display the registration view.
@@ -36,7 +36,7 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = Teacher::create([
+        $teacher = Teacher::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
