@@ -28,10 +28,10 @@ Route::middleware('guest')->group(function () {
 
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
-    Route::get('login-teacher', [AuthenticatedSessionController::class, 'create'])
-    ->name('login-teacher');
+    Route::get('login-teacher', [TeacherLoginController::class, 'create'])
+                ->name('login-teacher');
 
-    Route::post('login-teacher', [AuthenticatedSessionController::class, 'store']);
+    Route::post('login-teacher', [TeacherLoginController::class, 'store']);
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->name('password.request');
