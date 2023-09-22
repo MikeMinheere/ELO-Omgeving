@@ -20,7 +20,7 @@
   </div>
 
   <div style="width: 227px; padding-top: 19px; padding-bottom: 19px; left: 940px; top: 704px; position: absolute; background: #318D7E; border-radius: 8px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex">
-  <a  href="login" style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">LOGIN</a>
+  <a  href="teacherLogin" style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">LOGIN</a>
   </div>
 
   <div style="width: 263px; height: 93px; left: 456px; top: 346px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Changa One; font-weight: 400; word-wrap: break-word">WELKOM STUDENTEN</div>
