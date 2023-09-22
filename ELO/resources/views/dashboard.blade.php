@@ -31,7 +31,7 @@
                         @endif
                     </section>
                 @else
-                    <p>Please log in to access the dashboard.</p>
+                    
                 @endauth
             </div>
         </div>
