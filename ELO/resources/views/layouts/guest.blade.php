@@ -16,7 +16,10 @@
     </head>
     <body class="body">
         <div class="w-layout-blockcontainer">
+            <section    class="section">
+             <img src="\image\EMT-Logo (1).png" loading="lazy" width="75" alt="Logo">
                 {{ $slot }}
+            </section>
         </div>
     </body>
 </html>
