@@ -15,6 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
+        'guard' => 'webTeacher',
         'passwords' => 'users',
         'passwords' => 'teachers',
     ],
