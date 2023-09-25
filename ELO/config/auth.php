@@ -40,8 +40,11 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-            'provider' => 'teachers',
         ],
+        'webTeacher' => [
+            'driver' => 'session',
+            'provider' => 'teachers',
+        ]
     ],
 
     /*
