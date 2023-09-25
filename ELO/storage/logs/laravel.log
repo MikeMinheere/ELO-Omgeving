@@ -9023,8 +9023,11 @@ Did you mean one of these?
 #44 {main}
 >>>>>>> bd094b89a7a0aca589bbf6d54c174366bd13b214
 "} 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> bdeb8ed8a9a2a496fc3b165722a302ecc44ed0e6
 [2023-09-25 07:51:32] local.ERROR: Method App\Http\Controllers\Auth\TeacherLoginController::store does not exist. {"userId":2,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\Auth\\TeacherLoginController::store does not exist. at C:\\laragon\\www\\ELO-Omgeving\\ELO\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
 [stacktrace]
 #0 C:\\laragon\\www\\ELO-Omgeving\\ELO\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('store', Array)
@@ -9225,6 +9228,7 @@ Did you mean one of these?
 #45 C:\\laragon\\www\\ELO-Omgeving\\ELO\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #46 {main}
 "} 
+<<<<<<< HEAD
 [2023-09-25 08:01:56] local.ERROR: Method App\Http\Controllers\Auth\TeacherLoginController::store does not exist. {"userId":3,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\Auth\\TeacherLoginController::store does not exist. at C:\\laragon\\www\\ELO-Omgeving\\ELO\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
 [stacktrace]
 #0 C:\\laragon\\www\\ELO-Omgeving\\ELO\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('store', Array)
@@ -9276,3 +9280,5 @@ Did you mean one of these?
 #46 {main}
 "} 
 >>>>>>> Stashed changes
+=======
+>>>>>>> bdeb8ed8a9a2a496fc3b165722a302ecc44ed0e6
