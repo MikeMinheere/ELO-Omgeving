@@ -18,8 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/teacher', function () {
+Route::get('/teacherRegister', function () {
     return view('auth/register-teacher');
+});
+
+Route::get('/teacherLogin', function () {
+    return view('auth/login-teacher');
 });
 
 Route::get('/dashboard', function () {
