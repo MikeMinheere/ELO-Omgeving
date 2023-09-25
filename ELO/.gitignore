@@ -17,4 +17,8 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+<<<<<<< HEAD
 *.log
+=======
+/storage/logs/*.log
+>>>>>>> 23db13c4182e9133f0c5ddecb077728778a1b6f1
