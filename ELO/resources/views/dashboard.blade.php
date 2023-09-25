@@ -9,6 +9,9 @@
     <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OPDRACHTEN</div>
     <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OVERZICHT</div>
   </div>
+
+
+  
   <div style="padding-top: 19px; padding-bottom: 19px; padding-left: 59px; padding-right: 75px; left: 361px; top: 332px; position: absolute; background: #318D7E; border-radius: 8px; overflow: hidden; justify-content: flex-start; align-items: center; display: inline-flex">
     <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">KLASSEN</div>
   </div>
@@ -26,6 +29,14 @@
     </div>
     <div style="left: 59px; top: 19px; position: absolute; color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">NEEM CONTACT OP!</div>
   </div>
+
+  <div style="padding-left: 32px; padding-right: 32px; padding-top: 14px; padding-bottom: 14px; left: 1189px; top: 45px; position: absolute; background: black; border-radius: 8px; overflow: hidden; justify-content: center; z-index: 20; align-items: center; display: inline-flex">
+  <form method="POST" action="{{ route('logout') }}">
+     @csrf  
+    <a  href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">{{ __('Log Out') }}</a>
+  </form>
+  </div>
+
   <div style="width: 1440px; height: 188px; padding-top: 41px; padding-bottom: 115px; padding-left: 96px; padding-right: 1006px; left: 0px; top: 58px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex">
     <div style="color: white; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Engels Media & Techniek </div>
   </div>
