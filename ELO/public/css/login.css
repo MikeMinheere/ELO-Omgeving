@@ -32,6 +32,8 @@ html {
     padding-left: 25px;
     padding-right: 25px;
     display: flex;
+    margin: auto;
+    max-width: 20em;
 }
 
 .w-input, .w-select {
