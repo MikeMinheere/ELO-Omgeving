@@ -29,8 +29,8 @@ Route::get('/opdrachtenDocent', function () {
     return view('docent/opdrachtenDocent');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/dashboardDocent', function () {
+    return view('docent/dashboardDocent');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
