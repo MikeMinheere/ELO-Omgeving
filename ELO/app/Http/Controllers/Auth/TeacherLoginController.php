@@ -12,6 +12,11 @@ use Illuminate\View\View;
 
 class TeacherLoginController extends Controller
 {
+    public function __construct(){
+
+        $this->middleware('guest:teacher')->except('logout');
+    
+    }
     /**
      * Handle an authentication attempt.
      */
@@ -31,5 +36,10 @@ class TeacherLoginController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+    protected function guard(){
+
+        return Auth::guard('teacher');
+    
     }
 }

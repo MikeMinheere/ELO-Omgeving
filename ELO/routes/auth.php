@@ -32,7 +32,7 @@ Route::middleware('guest')->group(function () {
     Route::get('login-teacher', [TeacherLoginController::class, 'create'])
                 ->name('login-teacher');
 
-    Route::post('login-teacher', [TeacherLoginController::class, 'store']);
+    Route::post('login-teacher', [TeacherLoginController::class, 'authenticate']);
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->name('password.request');

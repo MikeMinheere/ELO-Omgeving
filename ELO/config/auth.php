@@ -16,7 +16,6 @@ return [
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
-        'passwords' => 'teachers',
     ],
 
     /*
@@ -40,8 +39,11 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-            'provider' => 'teachers',
         ],
+        'teacher' => [
+            'driver' => 'session',
+            'provider' => 'teachers',
+        ]
     ],
 
     /*
@@ -108,7 +110,7 @@ return [
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
-        ],
+        ]
     ],
 
     /*
