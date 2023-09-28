@@ -6,7 +6,7 @@
   <div style="width: 1274px; height: 1135px; left: 61px; top: 440px; position: absolute; background: linear-gradient(180deg, white 0%, #FFFFFF 100%); border-radius: 40px"></div>
   <div style="width: 1020px; left: 94px; top: 152px; position: absolute; color: black; font-size: 64px; font-family: Newsreader; font-weight: 400; line-height: 76.80px; word-wrap: break-word">Welcome, {{ Auth::user()->name }}!</div>
   <div style="padding-top: 6px; padding-bottom: 6px; padding-left: 44px; padding-right: 43px; left: 96px; top: 332px; position: absolute; background: #318D7E; border-radius: 8px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-    <a href="opdrachten.php" style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OPDRACHTEN</a>
+    <a href="docent/opdrachtenDocent" style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OPDRACHTEN</a>
     <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OVERZICHT</div>
   </div>
 

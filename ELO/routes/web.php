@@ -25,6 +25,9 @@ Route::get('/teacherRegister', function () {
 Route::get('/teacherLogin', function () {
     return view('auth/login-teacher');
 });
+Route::get('/opdrachtenDocent', function () {
+    return view('docent/opdrachtenDocent');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
