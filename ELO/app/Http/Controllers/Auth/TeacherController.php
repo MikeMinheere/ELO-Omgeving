@@ -8,6 +8,8 @@ class TeacherController extends Controller
 {
     public function index()
     {
-        return Redirect::route('/dashboardDocent');
+        Route::get('/dashboardDocent', function () {
+            return view('docent/dashboardDocent');
+        });
     }
 }

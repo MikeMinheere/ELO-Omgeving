@@ -14,21 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('/teacherRegister', function () {
-    return view('auth/register-teacher');
-});
-
-Route::get('/teacherLogin', function () {
-    return view('auth/login-teacher');
 });
 Route::get('/opdrachtenDocent', function () {
     return view('docent/opdrachtenDocent');
 });
 
+Route::get('/dashboardDocent', function () {
+    return view('docent/dashboardDocent');
+});
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

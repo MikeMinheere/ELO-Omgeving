@@ -19,6 +19,7 @@ class teacher
         $user = Auth::user();
         
         if($user->role == 'teacher' || $user->role == 'admin'){
+            console.log("it works?");
             return $next($request);
         }
         else{
