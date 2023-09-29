@@ -29,10 +29,6 @@ Route::get('/opdrachtenDocent', function () {
     return view('docent/opdrachtenDocent');
 });
 
-Route::get('/dashboardDocent', function () {
-    return view('docent/dashboardDocent');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
