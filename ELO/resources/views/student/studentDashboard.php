@@ -6,17 +6,17 @@
   <div style="width: 1274px; height: 1135px; left: 61px; top: 440px; position: absolute; background: linear-gradient(180deg, white 0%, #FFFFFF 100%); border-radius: 40px"></div>
   <div style="width: 1020px; left: 94px; top: 152px; position: absolute; color: black; font-size: 64px; font-family: Newsreader; font-weight: 400; line-height: 76.80px; word-wrap: break-word">Welcome, {{ Auth::user()->name }}!</div>
   <div style="padding-top: 6px; padding-bottom: 6px; padding-left: 44px; padding-right: 43px; left: 96px; top: 332px; position: absolute; background: #318D7E; border-radius: 8px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-    <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OPDRACHTEN</div>
-    <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">OVERZICHT</div>
+    <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">LEERLING</div>
+    <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">LEERLING</div>
   </div>
 
 
   
   <div style="padding-top: 19px; padding-bottom: 19px; padding-left: 59px; padding-right: 75px; left: 361px; top: 332px; position: absolute; background: #318D7E; border-radius: 8px; overflow: hidden; justify-content: flex-start; align-items: center; display: inline-flex">
-    <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">KLASSEN</div>
+    <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">LEERLING</div>
   </div>
   <div style="padding-top: 19px; padding-bottom: 19px; padding-left: 59px; padding-right: 85px; left: 616px; top: 332px; position: absolute; background: #318D7E; border-radius: 8px; overflow: hidden; justify-content: flex-start; align-items: center; display: inline-flex">
-    <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">PROFIEL</div>
+    <div style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">LEERLING</div>
   </div>
   <img style="width: 855px; height: 370px; left: 85px; top: 522px; position: absolute" src="https://via..com/855x370" />
   <img style="width: 331px; height: 370px; left: 949px; top: 522px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px black solid" src="https://via.placeholder.com/331x370" />
@@ -41,7 +41,7 @@
     <div style="color: white; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Engels Media & Techniek </div>
   </div>
   <img style="width: 232px; height: 316px; left: 1163px; top: 1730px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 7px; border: 1px black solid" src="https://via.placeholder.com/232x316" />
-  <div style="left: 96px; top: 251px; position: absolute; color: white; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Goede onderwijzers, zij maken echt het verschil </div>
+  <div style="left: 96px; top: 251px; position: absolute; color: white; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Goede studenten, zij maken echt het verschil </div>
   <div style="width: 1440px; height: 68px; left: -46px; top: 1764px; position: absolute"></div>
   <div style="left: 49px; top: 1816px; position: absolute; color: #318D7E; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Wil jij contact opnemen?</div>
   <div style="left: 53px; top: 2022px; position: absolute; color: #318D7E; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">© Davinci 2023 - Engels Media &  Techniek</div>
