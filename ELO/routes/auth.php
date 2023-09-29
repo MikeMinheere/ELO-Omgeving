@@ -17,10 +17,7 @@ Route::middleware('guest')->group(function () {
 
     Route::middleware('teacher')->group(function(){
         return view('docent/dashboardDocent');
-    });
-    Route::middleware('student')->group(function(){
-        Route::get('/studentDashboard', [TeacherController::class, 'index'])->name('studentDashboard');
-    });
+    })->name('teacher');
     
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');

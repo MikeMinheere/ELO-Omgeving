@@ -24,7 +24,12 @@ Route::get('/opdrachtenDocent', function () {
 
 Route::get('/dashboardDocent', function () {
     return view('docent/dashboardDocent');
+})->middleware('teacher');
+
+Route::get('/studentDashboard', function () {
+    return view('student/studentDashboard');
 });
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
