@@ -11,8 +11,8 @@
   <a href="#" class="button-3 w-button">KLASSEN</a>
 </div>
 <div class="container-4">
-  <img src="https://uploads-ssl.webflow.com/65167ec34df69a09d453a49c/651694055a394102aeec0054_agenda.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 766px) 80vw, 613px" srcset="https://uploads-ssl.webflow.com/65167ec34df69a09d453a49c/651694055a394102aeec0054_agenda-p-500.png 500w, https://uploads-ssl.webflow.com/65167ec34df69a09d453a49c/651694055a394102aeec0054_agenda.png 613w" alt="">
-  <img src="https://uploads-ssl.webflow.com/65167ec34df69a09d453a49c/651693e8ec4ab15b3b76ea06_notifications.png" loading="lazy" alt="" class="image-3">
+  <img src="image/agenda.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 766px) 80vw, 613px" srcset="https://uploads-ssl.webflow.com/65167ec34df69a09d453a49c/651694055a394102aeec0054_agenda-p-500.png 500w, https://uploads-ssl.webflow.com/65167ec34df69a09d453a49c/651694055a394102aeec0054_agenda.png 613w" alt="">
+  <img src="image/notifications.png" loading="lazy" alt="" class="image-3">
 </div>
 
 @endsection

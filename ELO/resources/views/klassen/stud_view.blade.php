@@ -16,14 +16,12 @@
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>First Name</th>
+        <th>Klassen</th>
       </tr>
     </thead>
     <tbody>
     @foreach ($klassen as $klassen)
       <tr>
-      <td>{{ $klassen->id }}</td>
       <td>{{ $klassen->klas_naam }}</td>
       </tr>
       @endforeach

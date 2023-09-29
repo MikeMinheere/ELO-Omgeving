@@ -14,9 +14,8 @@ class StudInsertController extends Controller
     }
 
     public function insert(Request $request){
-        $id = $request->input('id');
         $klassen_naam = $request->input('klas_naam');
-        $data=array('id'=>$id,"klas_naam"=>$klassen_naam);
+        $data=array("klas_naam"=>$klassen_naam);
         DB::table('klassen')->insert($data);
         echo "Record inserted successfully.<br/>";
         echo '<a href = "/add-klas">Click Here</a> to go back.';
