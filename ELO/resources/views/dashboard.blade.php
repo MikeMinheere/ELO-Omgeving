@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="text-block-2">Welkom docent</div>
-<div>Goede onderwijzers, zij maken echt het verschil</div>
+<div>Goede docenten, zij maken echt het verschil</div>
 
 <div class="container-button">
   <a href="#" class="button-3 w-button">OPDRACHTEN</a>
