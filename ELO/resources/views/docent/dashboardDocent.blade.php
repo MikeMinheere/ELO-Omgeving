@@ -15,5 +15,4 @@
   <img src="image/notifications.png" loading="lazy" alt="" class="image-3">
 </div>
 
-@endsection
-   
+@endsection  
