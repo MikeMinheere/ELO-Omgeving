@@ -2,10 +2,13 @@
     <form method="POST" action="{{ route('register') }}" class="form">
         @csrf
 
-        <!-- Name -->
+        <!-- First_name -->
+        <x-text-input id="first_name" class="w-input" type="text" name="first_name" :value="old('first_name')" placeholder="First name" required autofocus autocomplete="first_name" />
+        <x-input-error :messages="$errors->get('first_name')" class="mt-2" />
 
-        <x-text-input id="name" class="w-input" type="text" name="name" :value="old('name')" placeholder="Full Names" required autofocus autocomplete="name" />
-        <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        <!-- Last_name -->
+        <x-text-input id="last_name" class="w-input" type="text" name="last_name" :value="old('last_name')" placeholder="Last name" required autofocus autocomplete="last_name" />
+        <x-input-error :messages="$errors->get('last_name')" class="mt-2" />
 
         <!-- StudenNumber -->
         <x-text-input id="student_number" class="w-input" type="text" name="student_number" :value="old('student_number')" placeholder="Student Number" required autofocus autocomplete="student_number" />

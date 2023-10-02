@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,18 +24,17 @@ Route::get('/', function () {
 Route::get('/klassen', function () {
     return view('klassen');
 });
-
-Route::get('/teacherRegister', function () {
-    return view('auth/register-teacher');
+Route::get('/opdrachtenDocent', function () {
+    return view('docent/opdrachtenDocent');
 });
 
-Route::get('/teacherLogin', function () {
-    return view('auth/login-teacher');
-});
+Route::get('/dashboardDocent', function () {
+    return view('docent/dashboardDocent');
+})->middleware('teacher');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/studentDashboard', function () {
+    return view('student/studentDashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
