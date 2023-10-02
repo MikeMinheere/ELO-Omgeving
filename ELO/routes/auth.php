@@ -9,33 +9,25 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\RegisteredTeacherController;
-use App\Http\Controllers\Auth\TeacherLoginController;
+use App\Http\Controllers\Auth\TeacherController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
+
     Route::middleware('teacher')->group(function(){
-        Route::get('/dashboard', [TeacherLoginController::class, 'index'])->name('dashboard');
-    });
+        return view('docent/dashboardDocent');
+    })->name('teacher');
+    
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
 
     Route::post('register', [RegisteredUserController::class, 'store']);
 
-    Route::get('teacher-register', [RegisteredTeacherController::class, 'create'])
-                ->name('teacher-register');
-
-    Route::post('teacher-register', [RegisteredTeacherController::class, 'store']);
-
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
 
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
-
-    Route::get('login-teacher', [TeacherLoginController::class, 'create'])
-                ->name('login-teacher');
-
-    Route::post('login-teacher', [TeacherLoginController::class, 'authenticate']);
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->name('password.request');
