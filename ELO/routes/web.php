@@ -18,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('/klassen', function () {
+    return view('klassen');
+});
 Route::get('/opdrachtenDocent', function () {
     return view('docent/opdrachtenDocent');
 });
@@ -35,5 +41,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+
+
+Route::get('add-klas','App\Http\Controllers\StudInsertController@insertform');
+Route::post('create','App\Http\Controllers\StudInsertController@insert');
+Route::get('view-klas','App\Http\Controllers\StudViewController@index');
 
 require __DIR__.'/auth.php';
