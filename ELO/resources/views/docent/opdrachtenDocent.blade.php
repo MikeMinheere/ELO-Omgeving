@@ -18,7 +18,7 @@
         <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
         <label>Opdracht naam:</label>
         <input type="text" class="form-control" placeholder="opdracht naam" name="opdracht naam">
-        <button type="submit"  value = "Maak Opdracht" class="btn btn-primary">Submit</button>
+        <button type="submit"  value = "Maak Opdracht" class="btn btn-primary">Maak Opdracht</button>
     </form>
 </body>
 </html>
