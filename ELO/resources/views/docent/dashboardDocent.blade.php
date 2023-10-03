@@ -47,5 +47,3 @@
   <div style="left: 53px; top: 2022px; position: absolute; color: #318D7E; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">© Davinci 2023 - Engels Media &  Techniek</div>
   <img style="width: 20em; left: 966px; top: 84px; position: absolute" src="image/logo.png" />
 </div>
-
-   
