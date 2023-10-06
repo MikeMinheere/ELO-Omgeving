@@ -43,9 +43,10 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('add-Opdracht','App\Http\Controllers\OpdrachtenInsertController@insertform');
-Route::post('createOpdracht','App\Http\Controllers\OpdrachtenInsertController@insert');
-Route::get('view-Opdracht','App\Http\Controllers\OpdrachtenInsertController@index');
+Route::get('add-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insertform');
+Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@index');
 
 Route::get('add-klas','App\Http\Controllers\StudInsertController@insertform');
 Route::post('create','App\Http\Controllers\StudInsertController@insert');

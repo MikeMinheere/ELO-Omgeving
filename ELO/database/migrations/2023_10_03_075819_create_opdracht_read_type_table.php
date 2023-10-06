@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('opdracht_read_type', function (Blueprint $table) {
-            $table->id();
-            
+            $table->id();   
             $table->timestamps();
         });
     }

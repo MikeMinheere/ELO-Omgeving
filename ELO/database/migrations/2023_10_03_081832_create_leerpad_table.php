@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('leerpad', function (Blueprint $table) {
             $table->id();
-            $tabel->string('opdracht_naam');
+            $table->string('opdracht_naam');
             $table->timestamps();
         });
     }

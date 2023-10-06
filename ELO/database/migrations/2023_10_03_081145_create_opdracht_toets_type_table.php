@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('opdracht_test_type', function (Blueprint $table) {
+        Schema::create('opdracht_toets_type', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreign('opdracht_id')->references('id')->on('opdrachten');
         });
     }
 
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('opdracht_test_type');
+        Schema::dropIfExists('opdracht_toets_type');
     }
 };
