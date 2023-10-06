@@ -13,7 +13,7 @@ class OpdrachtenViewController extends Controller
      */
     public function index(): View
     {
-        $Opdrachten = DB::select('select * from Opdrachten');
-        return view('opdrachten/opdrachten_view',['opdrachten'=>$opdrachten]);
+        $opdrachten = DB::select('select * from Opdrachten');
+        return view('docent/opdrachten_view',['opdrachten'=>$opdrachten]);
         }
 }

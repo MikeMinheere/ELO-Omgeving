@@ -18,7 +18,5 @@ class opdrachtenInsertController extends Controller
         $opdracht_beschrijving = $request->input('opdracht_beschrijving');
         $data=array("opdracht_naam"=>$opdrachten_naam, "opdracht_beschrijving"=>$opdracht_beschrijving);
         DB::table('opdrachten')->insert($data);
-        echo "Record inserted successfully.<br/>";
-        echo '<a href = "/add-opdrachten">Click Here</a> to go back.';
     }
 }
