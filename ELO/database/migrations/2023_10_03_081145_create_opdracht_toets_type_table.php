@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('opdrachten', function (Blueprint $table) {
+        Schema::create('opdracht_toets_type', function (Blueprint $table) {
             $table->id();
-            $table->string('opdracht_naam')->unique();
-            $table->string('opdracht_beschrijving');
-            $table->string('opdracht_type');
             $table->timestamps();
         });
     }
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('opdrachten');
+        Schema::dropIfExists('opdracht_toets_type');
     }
 };

@@ -43,7 +43,11 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
+Route::get('add-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insertform');
+Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenView Controller@index');
 
 Route::get('add-klas','App\Http\Controllers\StudInsertController@insertform');
 Route::post('create','App\Http\Controllers\StudInsertController@insert');
