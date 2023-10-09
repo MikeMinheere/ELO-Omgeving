@@ -18,7 +18,7 @@
     <body>
         <!-- Page Content -->
         <div class="container-main">
-            @include('layouts\navigation-default')
+            @include('layouts/navigation-default')
             <div class="section section-main">
                 @yield('content')
             </div>
