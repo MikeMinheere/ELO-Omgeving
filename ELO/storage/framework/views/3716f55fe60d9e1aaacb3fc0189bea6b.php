@@ -1,5 +1,5 @@
-<?php $__env->startSection('content'); ?>
-<div style="width: 1440px; height: 2092px; position: relative; background: white">
+
+<div style="width: 1440px; height: 2092px; position: relative; background: white; font-family: 'Gabarito';">
   <div style="width: 1248px; height: 771px; left: 96px; top: 50px; position: absolute; background: linear-gradient(180deg, #318D7E 0%, #8CBE8D 100%); border-radius: 20px"></div>
   <div style="width: 367px; height: 711px; left: 416px; top: 80px; position: absolute; background: white; border-radius: 20px"></div>
   <div style="width: 367px; height: 711px; left: 870px; top: 80px; position: absolute; background: white; border-radius: 20px"></div>
@@ -20,12 +20,11 @@
   </div>
 
   <div style="width: 227px; padding-top: 19px; padding-bottom: 19px; left: 940px; top: 704px; position: absolute; background: #318D7E; border-radius: 8px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex">
-  <a  href="teacherLogin" style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">LOGIN</a>
+  <a  href="login" style="color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">LOGIN</a>
   </div>
 
   <div style="width: 263px; height: 93px; left: 456px; top: 346px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Changa One; font-weight: 400; word-wrap: break-word">WELKOM STUDENTEN</div>
   <div style="width: 263px; height: 93px; left: 922px; top: 346px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Changa One; font-weight: 400; word-wrap: break-word">WELKOM DOCENTEN</div>
 </div>
-<?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\ELO-Omgeving\ELO\resources\views/welcome.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\laragon\www\ELO-Omgeving\ELO\resources\views/welcome.blade.php ENDPATH**/ ?>

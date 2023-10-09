@@ -14,26 +14,43 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/teacherRegister', function () {
-    return view('auth/register-teacher');
+
+
+Route::get('/klassen', function () {
+    return view('klassen');
+});
+Route::get('/opdrachtenDocent', function () {
+    return view('docent/opdrachtenDocent');
 });
 
-Route::get('/teacherLogin', function () {
-    return view('auth/login-teacher');
-});
+Route::get('/dashboardDocent', function () {
+    return view('docent/dashboardDocent');
+})->middleware('teacher');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/studentDashboard', function () {
+    return view('student/studentDashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+Route::get('add-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insertform');
+Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenView Controller@index');
+
+Route::get('add-klas','App\Http\Controllers\StudInsertController@insertform');
+Route::post('create','App\Http\Controllers\StudInsertController@insert');
+Route::get('view-klas','App\Http\Controllers\StudViewController@index');
 
 require __DIR__.'/auth.php';
