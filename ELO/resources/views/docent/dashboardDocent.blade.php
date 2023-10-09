@@ -1,6 +1,21 @@
 @extends('layouts.app')
 
+
 @section('content')
+<div class="text-block-2">Welkom docent</div>
+<div>Goede docenten, zij maken echt het verschil</div>
+
+
+  <div style="width: 1440px; height: 188px; padding-top: 41px; padding-bottom: 115px; padding-left: 96px; padding-right: 1006px; left: 0px; top: 58px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex">
+    <div style="color: white; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Engels Media & Techniek </div>
+  </div>
+  <img style="width: 232px; height: 316px; left: 1163px; top: 1730px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 7px; border: 1px black solid" src="image\davinci-logo.jpg" />
+  <div style="left: 96px; top: 251px; position: absolute; color: white; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Goede onderwijzers, zij maken echt het verschil </div>
+  <div style="width: 1440px; height: 68px; left: -46px; top: 1764px; position: absolute"></div>
+  <div style="left: 49px; top: 1816px; position: absolute; color: #318D7E; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Wil jij contact opnemen?</div>
+  <div style="left: 53px; top: 2022px; position: absolute; color: #318D7E; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">© Davinci 2023 - Engels Media &  Techniek</div>
+  <img style="width: 20em; left: 966px; top: 84px; position: absolute" src="image/logo.png" />
+</div>
 <div style="width: 1519px; height: 2092px; position: relative; background: white">
   <div style="width: 1370px; height: 1615.50px; left: 25px; top: 26.50px; position: absolute; background: linear-gradient(180deg, #318D7E 0%, #8CBE8D 100%); border-radius: 20px"></div>
   <div style="width: 1274px; height: 1135px; left: 61px; top: 440px; position: absolute; background: linear-gradient(180deg, white 0%, #FFFFFF 100%); border-radius: 40px"></div>
@@ -28,4 +43,21 @@
     </div>
     <div style="left: 59px; top: 19px; position: absolute; color: white; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 26px; word-wrap: break-word">NEEM CONTACT OP!</div>
   </div>
-  @endsection
+
+
+@section('content')
+<div class="text-block-2">Welkom docent</div>
+<div>Goede docenten, zij maken echt het verschil</div>
+
+
+  <div style="width: 1440px; height: 188px; padding-top: 41px; padding-bottom: 115px; padding-left: 96px; padding-right: 1006px; left: 0px; top: 58px; position: absolute; justify-content: flex-start; align-items: center; display: inline-flex">
+    <div style="color: white; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Engels Media & Techniek </div>
+  </div>
+  <img style="width: 232px; height: 316px; left: 1163px; top: 1730px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 7px; border: 1px black solid" src="image\davinci-logo.jpg" />
+  <div style="left: 96px; top: 251px; position: absolute; color: white; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Goede onderwijzers, zij maken echt het verschil </div>
+  <div style="width: 1440px; height: 68px; left: -46px; top: 1764px; position: absolute"></div>
+  <div style="left: 49px; top: 1816px; position: absolute; color: #318D7E; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">Wil jij contact opnemen?</div>
+  <div style="left: 53px; top: 2022px; position: absolute; color: #318D7E; font-size: 32px; font-family: Newsreader; font-weight: 500; line-height: 32px; word-wrap: break-word">© Davinci 2023 - Engels Media &  Techniek</div>
+  <img style="width: 20em; left: 966px; top: 84px; position: absolute" src="image/logo.png" />
+</div>
+
