@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('opdracht_read_type', function (Blueprint $table) {
             $table->id();   
             $table->timestamps();
-            $table->foreign('opdracht_id')->references('id')->on('opdrachten');
         });
     }
 
