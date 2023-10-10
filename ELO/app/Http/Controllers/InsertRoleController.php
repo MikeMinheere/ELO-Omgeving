@@ -13,7 +13,7 @@ class InsertRoleController extends Controller
 
     //insert the teacher role to the user table
     public function insert(Request $request){
-        $role = '';
+        $role = 'teacher';
         $data=array("role"=>$role);
         DB::table('users')->insert($data);
         echo "Record inserted successfully.<br/>";
