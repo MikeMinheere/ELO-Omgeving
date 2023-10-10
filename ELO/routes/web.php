@@ -42,7 +42,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
 Route::get('add-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insertform');
 Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
