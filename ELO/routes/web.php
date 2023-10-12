@@ -29,7 +29,7 @@ Route::get('/opdrachtenDocent', function () {
 });
 
 Route::get('/dashboardDocent', function () {
-    return view('docent/dashboardDocent');
+    return view('docent/docentDashboard');
 })->middleware('teacher');
 
 Route::get('/studentDashboard', function () {
