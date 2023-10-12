@@ -41,13 +41,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
+# Routes voor de opdrachten aanmaken / view
 Route::get('add-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insertform');
 Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenView Controller@index');
 
+# Routes voor de klassen aanmaken / view
 Route::get('add-klas','App\Http\Controllers\StudInsertController@insertform');
 Route::post('create','App\Http\Controllers\StudInsertController@insert');
 Route::get('view-klas','App\Http\Controllers\StudViewController@index');
