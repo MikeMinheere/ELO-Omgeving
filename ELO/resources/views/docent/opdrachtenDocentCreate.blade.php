@@ -26,7 +26,7 @@
         <br>
 
         <label>Opdracht type:</label><br>
-        <select id="cars" name="cars">
+        <select id="OpdrachtTypes" name="OpdrachtTypes">
           <option value="Toets">Toets</option>
           <option value="Text">Text</option>
           <option value="Bestand">Inleverpunt</option>

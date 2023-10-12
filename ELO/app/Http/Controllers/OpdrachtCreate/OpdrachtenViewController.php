@@ -9,7 +9,7 @@ use Illuminate\View\View;
 class OpdrachtenViewController extends Controller
 {
     /**
-     * Show a list of all of the application's users.
+     * Show a list of all of the application's opdrachten.
      */
     public function index(): View
     {

@@ -24,8 +24,8 @@ Route::get('/', function () {
 Route::get('/klassen', function () {
     return view('klassen');
 });
-Route::get('/opdrachtenDocent', function () {
-    return view('docent/opdrachtenDocent');
+Route::get('/docentOpdrachtenCreate', function () {
+    return view('docent/docentOpdrachtenCreate');
 });
 
 Route::get('/dashboardDocent', function () {
@@ -41,7 +41,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
 
 Route::get('add-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insertform');
 Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
