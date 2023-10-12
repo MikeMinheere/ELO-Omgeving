@@ -24,12 +24,12 @@ Route::get('/', function () {
 Route::get('/klassen', function () {
     return view('klassen');
 });
-Route::get('/opdrachtenDocent', function () {
-    return view('docent/opdrachtenDocent');
+Route::get('/docentOpdrachtenCreate', function () {
+    return view('docent/docentOpdrachtenCreate');
 });
 
 Route::get('/dashboardDocent', function () {
-    return view('docent/dashboardDocent');
+    return view('docent/docentDashboard');
 })->middleware('teacher');
 
 Route::get('/studentDashboard', function () {
