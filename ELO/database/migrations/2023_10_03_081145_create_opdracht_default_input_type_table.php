@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('opdracht_toets_type', function (Blueprint $table) {
+        Schema::create('opdracht_default_input_type', function (Blueprint $table) {
             $table->id();
+            $table->string("text_input");
+            $table->string("opdracht_naam")->reference("opdracht_naam")->on("opdrachten");
+            $table->integer("student")->reference("student_number")->on("users");
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('opdracht_toets_type');
+        Schema::dropIfExists('opdracht_default_input_type');
     }
 };
