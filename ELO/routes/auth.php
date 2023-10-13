@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('guest')->group(function () {
 
     Route::middleware('teacher')->group(function(){
-        return view('docent/dashboardDocent');
+        return view('docent/docentDashboard');
     })->name('teacher');
     
     Route::get('register', [RegisteredUserController::class, 'create'])
