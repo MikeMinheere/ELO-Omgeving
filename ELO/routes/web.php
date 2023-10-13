@@ -28,13 +28,20 @@ Route::get('/docentOpdrachtenCreate', function () {
     return view('docent/docentOpdrachtenCreate');
 });
 
-Route::get('/dashboardDocent', function () {
+Route::get('/docentDashboard', function () {
     return view('docent/docentDashboard');
 })->middleware('teacher');
 
 Route::get('/studentDashboard', function () {
     return view('student/studentDashboard');
 });
+
+Route::get('/studentOpdrachten', function () {
+    return view('student/studentOpdrachten');
+});
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
