@@ -14,13 +14,18 @@
         <x-text-input id="student_number" class="w-input" type="text" name="student_number" :value="old('student_number')" placeholder="Student Number" required autofocus autocomplete="student_number" />
         <x-input-error :messages="$errors->get('student_number')" class="mt-2" />
 
-        <!-- Class Name -->
-        <x-text-input id="class_name" class="w-input" type="text" name="class_name" :value="old('class_name')" placeholder="Class Name" required autofocus autocomplete="class_name" />
-        <x-input-error :messages="$errors->get('class_name')" class="mt-2" />
 
         <!-- Email Address -->
         <x-text-input id="email" class="w-input" type="email" name="email" :value="old('email')" placeholder="Email" required autocomplete="username" />
         <x-input-error :messages="$errors->get('email')" class="mt-2" />
+
+        <!-- Class Name -->
+        <select id="class_name" class="w-input" type="select" name="class_name" :value="old('class_name')" placeholder="Class Name" required autofocus autocomplete="class_name">
+            @foreach ($classname as $class)
+                <option value="{{ $class->class_name }}">{{ $class->class_name }}</option>
+            @endforeach
+        </select>
+
 
         <!-- Password -->
         <x-text-input id="password" class="w-input"
