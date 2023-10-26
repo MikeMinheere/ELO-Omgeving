@@ -24,7 +24,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
 
-            $table->foreign('class_name')->references('name')->on('klassen')->onUpdate('cascade');
+            $table->foreign('class_name')->references('class_name')->on('klassen')->onUpdate('cascade');
         });
     }
 

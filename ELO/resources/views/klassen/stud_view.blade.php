@@ -22,7 +22,7 @@
     <tbody>
     @foreach ($klassen as $klassen)
       <tr>
-      <td>{{ $klassen->klas_naam }}</td>
+      <td>{{ $klassen->name }}</td>
       </tr>
       @endforeach
     </tbody>

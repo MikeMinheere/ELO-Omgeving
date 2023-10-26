@@ -22,7 +22,7 @@
         <!-- Class Name -->
         <select id="class_name" class="w-input" type="select" name="class_name" :value="old('class_name')" placeholder="Class Name" required autofocus autocomplete="class_name">
             @foreach ($classname as $class)
-                <option value="{{ $class->name }}">{{ $class->name }}</option>
+                <option value="{{ $class->class_name }}">{{ $class->class_name }}</option>
             @endforeach
         </select>
 
