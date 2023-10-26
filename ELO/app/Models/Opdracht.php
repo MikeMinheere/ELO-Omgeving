@@ -14,4 +14,9 @@ class Opdracht extends Model
         'opdracht_beschrijving',
         'opdracht_type',
     ];
+
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class);
+    }
 }
