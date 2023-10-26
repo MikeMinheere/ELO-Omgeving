@@ -53,7 +53,7 @@ Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInse
 Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 
-Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenView Controller@index');
+Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenViewController@index');
 
 # Routes voor de klassen aanmaken / view
 Route::get('add-klas','App\Http\Controllers\StudInsertController@insertform');
