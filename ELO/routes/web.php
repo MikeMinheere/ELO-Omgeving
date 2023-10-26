@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\OpdrachtCreate\OpdrachtenViewController;
+use App\Http\Controllers\OpdrachtController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,7 @@ Route::get('/klassen', function () {
     return view('klassen');
 });
 Route::get('/docentOpdrachtenCreate', function () {
-    return view('docent/docentOpdrachtenCreate');
+    return view('docent/docentOpdrachtCreate');
 });
 
 Route::get('/docentDashboard', function () {
@@ -36,10 +38,7 @@ Route::get('/studentDashboard', function () {
     return view('student/studentDashboard');
 });
 
-Route::get('/studentOpdrachten', function () {
-    return view('student/studentOpdrachten');
-});
-
+Route::resource('studentOpdrachten', OpdrachtController::class);
 
 
 
@@ -53,6 +52,7 @@ Route::get('add-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertC
 Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
+
 Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenView Controller@index');
 
 # Routes voor de klassen aanmaken / view

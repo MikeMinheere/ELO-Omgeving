@@ -5,7 +5,10 @@ namespace App\Http\Controllers\OpdrachtCreate;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
- 
+use App\Models\Opdracht;
+use Illuminate\Http\Request;
+
+
 class OpdrachtenViewController extends Controller
 {
     /**
@@ -13,7 +16,8 @@ class OpdrachtenViewController extends Controller
      */
     public function index(): View
     {
-        $opdrachten = DB::select('select * from Opdrachten');
-        return view('docent/opdrachten_view',['opdrachten'=>$opdrachten]);
+        $opdrachten = Opdrachten::latest()->paginate(100);
+        return view('student.studentOpdrachten',compact('opdrachten'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
         }
 }
