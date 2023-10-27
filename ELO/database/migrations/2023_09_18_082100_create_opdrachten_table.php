@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->string('opdracht_naam')->unique();
             $table->string('opdracht_beschrijving');
-            $table->string('opdracht_type');
+            $table->string('opdracht_type')->nullable();
             $table->timestamps();
         });
     }

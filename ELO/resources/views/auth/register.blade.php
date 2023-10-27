@@ -6,6 +6,10 @@
         <x-text-input id="first_name" class="w-input" type="text" name="first_name" :value="old('first_name')" placeholder="First name" required autofocus autocomplete="first_name" />
         <x-input-error :messages="$errors->get('first_name')" class="mt-2" />
 
+        <!-- Prefix -->
+        <x-text-input id="prefix" class="w-input" type="text" name="prefix" :value="old('prefix')" placeholder="Prefix" required autofocus autocomplete="prefix" />
+        <x-input-error :messages="$errors->get('prefix')" class="mt-2" />
+
         <!-- Last_name -->
         <x-text-input id="last_name" class="w-input" type="text" name="last_name" :value="old('last_name')" placeholder="Last name" required autofocus autocomplete="last_name" />
         <x-input-error :messages="$errors->get('last_name')" class="mt-2" />

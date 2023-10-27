@@ -7,7 +7,7 @@
 <div>Goede Docenten, zij maken echt het verschil</div>
 
 <div class="container-button">
-  <a href="/opdrachtenDocent" class="button-3 w-button">Opdrachten</a>
+  <a href="/docentOpdrachtenCreate" class="button-3 w-button">Opdrachten</a>
   <a href="#" class="button-3 w-button">Rooster</a>
 </div>
 <div class="container-4">
