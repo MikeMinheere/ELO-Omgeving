@@ -11,8 +11,11 @@
 
 @foreach ($opdrachten as $opdracht)
 <tr>
-<td>{{$opdracht ->opdracht_naam}}</td>
+  
+<div style="width:300px; height:40px; background-color:318D7E; margin-bottom:20px; border-radius:10px">
 
+<td>{{$opdracht ->opdracht_naam}}</td>
+</div>
 
 </tr>
 
