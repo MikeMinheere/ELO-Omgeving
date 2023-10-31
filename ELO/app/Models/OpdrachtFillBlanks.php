@@ -5,21 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Opdracht extends Model
+class OpdrachtFillBlanks extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'opdracht_naam',
         'user_id',
         'opdracht_beschrijving',
-        'opdracht_type',
+        'input',
+        'output'
     ];
-
-    public function users(): BelongsToMany
+    
+    public function opdracht(): HasMany
     {
-        return $this->belongsToMany(User::class);
+        return $this->hasMany(Opdracht::class);
     }
-
-    protected $table = "opdrachten";
 }

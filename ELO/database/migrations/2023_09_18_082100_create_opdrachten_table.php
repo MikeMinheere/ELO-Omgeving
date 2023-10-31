@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('opdrachten', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->string('opdracht_naam')->unique();
             $table->string('opdracht_beschrijving');
-            $table->string('opdracht_type');
+            $table->string('opdracht_type')->nullable();
             $table->timestamps();
         });
     }
