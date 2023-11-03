@@ -11,7 +11,7 @@ class OpdrachtDefaultInput extends Model
 
     protected $fillable = [
         'user_id',
-        'opdracht_beschrijving',
+        'opdracht_naam',
         'input',
         'output'
     ];

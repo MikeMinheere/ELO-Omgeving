@@ -7,7 +7,7 @@
         <x-input-error :messages="$errors->get('first_name')" class="mt-2" />
 
         <!-- Prefix -->
-        <x-text-input id="prefix" class="w-input" type="text" name="prefix" :value="old('prefix')" placeholder="Prefix" required autofocus autocomplete="prefix" />
+        <x-text-input id="prefix" class="w-input" type="text" name="prefix" :value="old('prefix')" placeholder="Prefix"/>
         <x-input-error :messages="$errors->get('prefix')" class="mt-2" />
 
         <!-- Last_name -->
