@@ -17,18 +17,18 @@
     <form action = "/createOpdracht" method = "post" class="form-group" style="width:70%; margin-left:15%;" action="/action_page.php">
 
         <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
-        <label>Opdracht naam:</label>
-        <input type="text" class="form-control" placeholder="opdracht naam" name="opdracht naam" required autofocus autocomplete="opdracht_naam">
+        <label>Opdrachtnaam:</label>
+        <input type="text" class="form-control" placeholder="Opdrachtnaam" name="opdracht naam" required autofocus autocomplete="opdracht_naam">
         <br>
 
         <label>Beschrijving:</label>
-        <input type="text" class="form-control" placeholder="opdracht beschrijving" name="opdracht beschrijving" required autofocus autocomplete="opdracht_beschrijving">
+        <input type="text" class="form-control" placeholder="Opdrachtbeschrijving" name="opdracht beschrijving" required autofocus autocomplete="opdracht_beschrijving">
         <br>
 
         <label>Opdracht type:</label><br>
         <select id="cars" name="cars">
           <option value="Toets">Toets</option>
-          <option value="Text">Text</option>
+          <option value="Text">Tekst</option>
           <option value="Bestand">Inleverpunt</option>
         </select>
         <br><br>

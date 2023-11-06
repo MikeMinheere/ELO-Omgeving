@@ -20,11 +20,13 @@
             </div>
 
             <table class="table table-bordered">
+                <th>Naam student</th>
+                <th width="280px">Studenten nummer</th>
+
             @foreach ($students as $student)
             <tr>
-                <td>{{ $student->id }}</td>
-                <td>{{ $student->first_name }}</td>
-                <td>{{ $student->last_name }}</td>
+                <th>{{ $student->first_name }} {{ $student->last_name }}</th>
+                <th>{{ $student->student_number }}</th>
             </tr>
             @endforeach
             </table>

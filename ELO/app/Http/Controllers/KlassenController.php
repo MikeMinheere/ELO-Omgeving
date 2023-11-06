@@ -14,11 +14,11 @@ class KlassenController extends Controller
     public function index()
     {
 
-        $klassen = Klassen::latest()->paginate(5);
-        $students = Klassen::find(1)->users->count();
+        $klassen = Klassen::all();
+        $student = Klassen::withCount('users')->get(); 
+        $i = 0;
 
-        return view('klassen.index',compact('klassen'),compact('students'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('klassen.index',compact('klassen'),compact('student'),compact('i'))->with('i', $i);
     }
 
 
@@ -27,9 +27,9 @@ class KlassenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Klassen $klassen)
     {
-        return view('klassen.create');
+        return view('klassen.create',compact('klassen'));
     }
 
 
@@ -69,7 +69,8 @@ class KlassenController extends Controller
      */
     public function edit(Klassen $klassen)
     {
-        return view('klassen.edit',compact('klassen'));
+        $students = User::all();
+        return view('klassen.edit',compact('klassen'),compact('students'));
     }
 
     /**
@@ -79,13 +80,36 @@ class KlassenController extends Controller
      * @param  \App\Klassen  $klas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Klassen $klassen)
+    public function update(Request $request, Klassen $klassen, User $users)
     {
-        $students = Klassen::find($klassen->id)->users;
+        $students = User::all();
+
+
 
         $request->validate([
             'class_name' => 'required',
+
         ]);
+
+        foreach ($students as $student) {
+            if (in_array($student->id , $request->get('user'))) {
+                $klasnaam = $klassen->class_name;
+                // Perform actions or logic for checked checkbox
+            } else {
+                if($student->class_name == $klassen->class_name ){
+                    $klasnaam = 'Geen klas';
+                } else {
+                    $klasnaam = $student->class_name;
+                } 
+                // Perform actions or logic for unchecked checkbox
+            }
+            $student->fill([
+                'id' => $student->id,
+                'class_name' => $klasnaam
+            ]);
+
+            $student->save();
+        }
     
         $klassen->update($request->all());
     
@@ -98,6 +122,19 @@ class KlassenController extends Controller
      */
     public function destroy(Klassen $klassen)
     {
+        $students = Klassen::find($klassen->id)->users;
+
+        foreach ($students as $student) {
+
+            $klasnaam = 'Geen klas';
+
+            $student->fill([
+                'id' => $student->id,
+                'class_name' => $klasnaam
+            ]);
+
+            $student->save();
+        }
         $klassen->delete();
     
         return redirect()->route('klassen.index')
