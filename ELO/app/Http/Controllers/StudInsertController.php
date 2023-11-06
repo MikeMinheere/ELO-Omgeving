@@ -13,6 +13,7 @@ class StudInsertController extends Controller
         return view('klassen/stud_create');
     }
 
+    //insert the klas to the klassen table
     public function insert(Request $request){
         $klassen_naam = $request->input('klas_naam');
         $data=array("klas_naam"=>$klassen_naam);

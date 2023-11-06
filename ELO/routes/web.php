@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\OpdrachtCreate\OpdrachtenViewController;
+use App\Http\Controllers\OpdrachtController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,31 +26,36 @@ Route::get('/', function () {
 Route::get('/klassen', function () {
     return view('klassen');
 });
-Route::get('/opdrachtenDocent', function () {
-    return view('docent/opdrachtenDocent');
+Route::get('/docentOpdrachtenCreate', function () {
+    return view('docent/docentOpdrachtCreate');
 });
 
-Route::get('/dashboardDocent', function () {
-    return view('docent/dashboardDocent');
+Route::get('/docentDashboard', function () {
+    return view('docent/docentDashboard');
 })->middleware('teacher');
 
 Route::get('/studentDashboard', function () {
     return view('student/studentDashboard');
 });
 
+Route::resource('studentOpdrachten', OpdrachtController::class);
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-
+# Routes voor de opdrachten aanmaken / view
 Route::get('add-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insertform');
 Route::post('createOpdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
 Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtCreate\OpdrachtenInsertController@insert');
-Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenView Controller@index');
 
+Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenViewController@index');
+
+# Routes voor de klassen aanmaken / view
 Route::get('add-klas','App\Http\Controllers\StudInsertController@insertform');
 Route::post('create','App\Http\Controllers\StudInsertController@insert');
 Route::get('view-klas','App\Http\Controllers\StudViewController@index');

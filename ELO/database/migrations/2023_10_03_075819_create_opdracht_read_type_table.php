@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('opdracht_read_type', function (Blueprint $table) {
             $table->id();   
+            $table->string("opdracht_naam")->references("opdracht_naam")->on("opdrachten");
+            $table->integer("student")->references("student_number")->on("users");
             $table->timestamps();
         });
     }

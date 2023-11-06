@@ -19,12 +19,12 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'first_name',
+        'prefix',
         'last_name',
         'email',
         'password',
         'student_number',
         'class_name',
-        'role'
     ];
 
     /**
@@ -46,4 +46,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function opdrachten(): BelongsToMany
+    {
+        return $this->belongsToMany(Opdracht::class);
+    }
 }
