@@ -14,11 +14,11 @@ class KlassenController extends Controller
     public function index()
     {
 
-        $klassen = Klassen::latest()->paginate(5);
+        $klassen = Klassen::all();
         $student = Klassen::withCount('users')->get(); 
+        $i = 0;
 
-        return view('klassen.index',compact('klassen'),compact('student'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('klassen.index',compact('klassen'),compact('student'),compact('i'))->with('i', $i);
     }
 
 
@@ -27,9 +27,9 @@ class KlassenController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Klassen $klassen)
     {
-        return view('klassen.create');
+        return view('klassen.create',compact('klassen'));
     }
 
 
@@ -122,6 +122,19 @@ class KlassenController extends Controller
      */
     public function destroy(Klassen $klassen)
     {
+        $students = Klassen::find($klassen->id)->users;
+
+        foreach ($students as $student) {
+
+            $klasnaam = 'Geen klas';
+
+            $student->fill([
+                'id' => $student->id,
+                'class_name' => $klasnaam
+            ]);
+
+            $student->save();
+        }
         $klassen->delete();
     
         return redirect()->route('klassen.index')
