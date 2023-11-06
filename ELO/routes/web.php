@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KlassenController;
 use App\Models\Klassen;
+use App\Http\Controllers\OpdrachtController;
+use app\Http\Controllers\OpdrachtCreate\OpdrachtenViewController;
+
 
 /*
 |--------------------------------------------------------------------------
