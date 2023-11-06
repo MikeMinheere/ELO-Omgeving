@@ -3,34 +3,38 @@
 @section('content')
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opdrachten</title>
+  <title>Opdracht maken</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <h1>Maak een nieuwe opdracht</h1>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <label for="opdracht">Opdracht:</label>
-        <input type="text" id="opdracht" name="opdracht" required><br><br>
+    <h1>Maak een nieuwe opdracht:</h1>
+    <form action = "/createOpdracht" method = "post" class="form-group" style="width:70%; margin-left:15%;" action="/action_page.php">
 
-        <label for="deadline">Deadline:</label>
-        <input type="date" id="deadline" name="deadline" required><br><br>
+        <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
+        <label>Opdracht naam:</label>
+        <input type="text" class="form-control" placeholder="opdracht naam" name="opdracht naam" required autofocus autocomplete="opdracht_naam">
+        <br>
 
-        <input type="submit" value="Opdracht aanmaken">
+        <label>Beschrijving:</label>
+        <input type="text" class="form-control" placeholder="opdracht beschrijving" name="opdracht beschrijving" required autofocus autocomplete="opdracht_beschrijving">
+        <br>
+
+        <label>Opdracht type:</label><br>
+        <select id="cars" name="cars">
+          <option value="Toets">Toets</option>
+          <option value="Text">Text</option>
+          <option value="Bestand">Inleverpunt</option>
+        </select>
+        <br><br>
+
+        <button type="submit"  value = "Maak Opdracht" class="btn btn-primary">Maak Opdracht</button>
     </form>
-
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Verkrijg gegevens van het formulier
-        $opdracht = $_POST['opdracht'];
-        $deadline = $_POST['deadline'];
-
-        // Toon de ingevulde opdrachtgegevens
-        echo "<h2>Nieuwe opdracht aangemaakt:</h2>";
-        echo "<p><strong>Opdracht:</strong> $opdracht</p>";
-        echo "<p><strong>Deadline:</strong> $deadline</p>";
-    }
-    ?>
 </body>
 </html>
 @endsection
