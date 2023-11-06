@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\OpdrachtCreate\OpdrachtenViewController;
-use App\Http\Controllers\OpdrachtController;
+use App\Http\Controllers\KlassenController;
+use App\Models\Klassen;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +22,8 @@ Route::get('/', function () {
 });
 
 
-
-Route::get('/klassen', function () {
-    return view('klassen');
-});
-Route::get('/docentOpdrachtenCreate', function () {
-    return view('docent/docentOpdrachtCreate');
+Route::get('/opdrachtenDocent', function () {
+    return view('docent/opdrachtenDocent');
 });
 
 Route::get('/docentDashboard', function () {
@@ -55,9 +51,7 @@ Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtCreate\Opdrachte
 
 Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenViewController@index');
 
-# Routes voor de klassen aanmaken / view
-Route::get('add-klas','App\Http\Controllers\StudInsertController@insertform');
-Route::post('create','App\Http\Controllers\StudInsertController@insert');
-Route::get('view-klas','App\Http\Controllers\StudViewController@index');
+
+Route::resource('klassen', KlassenController::class);
 
 require __DIR__.'/auth.php';

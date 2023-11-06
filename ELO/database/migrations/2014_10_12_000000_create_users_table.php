@@ -19,11 +19,13 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('student_number')->unique();
-            $table->string('class_name');
+            $table->string('class_name')->index();
             $table->string('password');
             $table->string('role')->default('student');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('class_name')->references('class_name')->on('klassen')->onUpdate('cascade');
         });
     }
 

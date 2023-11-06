@@ -47,8 +47,8 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function opdrachten(): BelongsToMany
+    public function klas() 
     {
-        return $this->belongsToMany(Opdracht::class);
+        return $this->belongsTo(Klassen::class, 'class_name', 'class_name');
     }
 }

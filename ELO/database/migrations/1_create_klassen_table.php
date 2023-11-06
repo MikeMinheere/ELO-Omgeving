@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('klassen', function (Blueprint $table) {
             $table->id();
-            $table->string('klas_naam');
+            $table->string('class_name')->index();
             $table->timestamps();
         });
     }
@@ -26,3 +26,4 @@ return new class extends Migration
         Schema::dropIfExists('klassen');
     }
 };
+
