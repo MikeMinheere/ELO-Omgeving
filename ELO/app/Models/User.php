@@ -46,4 +46,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function klas() 
+    {
+        return $this->belongsTo(Klassen::class, 'class_name', 'class_name');
+    }
 }
