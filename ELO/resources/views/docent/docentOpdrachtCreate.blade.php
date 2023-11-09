@@ -14,7 +14,7 @@
 
 <body>
     <h1>Maak een nieuwe opdracht:</h1>
-    <form action = "/createOpdracht" method = "post" class="form-group" style="width:70%; margin-left:15%;" action="/action_page.php">
+    <form action = "/createOpdracht" method = "post" class="form-group" style="width:70%; margin-left:15%;">
 
         <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
         <label>Opdrachtnaam:</label>

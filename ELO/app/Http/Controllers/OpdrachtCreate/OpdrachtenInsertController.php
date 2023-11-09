@@ -31,7 +31,7 @@ class opdrachtenInsertController extends Controller
             DB::table('opdrachten')->insert($data);
     
             // You can also redirect back with a success message
-            return redirect()->back()->with('success', 'Opdracht successfully inserted.');
+            return redirect()->to('/studentOpdrachten');
         }
     }
 }

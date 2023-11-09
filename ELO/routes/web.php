@@ -29,12 +29,20 @@ Route::get('/opdrachtenDocent', function () {
     return view('docent/opdrachtenDocent');
 });
 
+Route::get('/docentOpdrachtCreate', function () {
+    return view('docent/docentOpdrachtCreate');
+});
+
 Route::get('/docentDashboard', function () {
     return view('docent/docentDashboard');
 })->middleware('teacher');
 
 Route::get('/studentDashboard', function () {
     return view('student/studentDashboard');
+});
+
+Route::get('/studentOpdrachten', function () {
+    return view('student/studentOpdrachten');
 });
 
 Route::resource('studentOpdrachten', OpdrachtController::class);
