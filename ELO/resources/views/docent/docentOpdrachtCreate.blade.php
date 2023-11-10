@@ -26,7 +26,7 @@
         <br>
 
         <label>Opdracht type:</label><br>
-        <select id="opdracht_type" name="OpdrachtType" required autofocus autocomplete="opdracht_type">
+        <select id="opdracht_type" name="opdracht_type" required autofocus autocomplete="opdracht_type">
           <option value="Toets">Toets</option>
           <option value="Text">Tekst</option>
           <option value="Bestand">Inleverpunt</option>

@@ -16,6 +16,7 @@ class opdrachtenInsertController extends Controller
     public function insert(Request $request){
         $opdrachten_naam = $request->input('opdracht_naam');
         $opdracht_beschrijving = $request->input('opdracht_beschrijving');
+        $opdracht_type = $request->input('opdracht_type');
     
         // Check if the record already exists
         $opdracht = DB::table('opdrachten')->where('opdracht_naam', $opdrachten_naam)->first();
@@ -27,7 +28,7 @@ class opdrachtenInsertController extends Controller
             return redirect()->back()->with('error', 'Opdracht with this name already exists.');
         } else {
             // Record doesn't exist, insert a new one
-            $data = array("opdracht_naam" => $opdrachten_naam, "opdracht_beschrijving" => $opdracht_beschrijving);
+            $data = array("opdracht_naam" => $opdrachten_naam, "opdracht_beschrijving" => $opdracht_beschrijving, "opdracht_type" => $opdracht_type);
             DB::table('opdrachten')->insert($data);
     
             // You can also redirect back with a success message
