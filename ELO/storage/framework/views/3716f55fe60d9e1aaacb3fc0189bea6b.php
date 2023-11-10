@@ -25,6 +25,4 @@
 
   <div style="width: 263px; height: 93px; left: 456px; top: 346px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Changa One; font-weight: 400; word-wrap: break-word">Welkom Studenten</div>
   <div style="width: 263px; height: 93px; left: 922px; top: 346px; position: absolute; text-align: center; color: black; font-size: 20px; font-family: Changa One; font-weight: 400; word-wrap: break-word">Welkom Docenten</div>
-</div>
-
-<?php /**PATH C:\laragon\www\ELO-Omgeving\ELO\resources\views/welcome.blade.php ENDPATH**/ ?>
+</div><?php /**PATH C:\laragon\www\ELO-Omgeving\ELO\resources\views/welcome.blade.php ENDPATH**/ ?>
