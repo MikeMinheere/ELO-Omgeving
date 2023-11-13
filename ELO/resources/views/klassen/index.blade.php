@@ -2,12 +2,12 @@
  
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Classes</h2>
+        <div>
+            <div>
+                <h1>Classes</h1>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('klassen.create') }}"> Create New class</a>
+                <a class="button" href="{{ route('klassen.create') }}"> Create New class</a>
             </div>
         </div>
     </div>
@@ -32,20 +32,19 @@
             <th>{{ $student[$i]->users_count }}</th>
             <th hidden >{{ ++$i }}</th>
             
-            <th>
-                <form action="{{ route('klassen.destroy',$klas->id) }}" method="POST">
+            <td>
+                <form action="{{ route('klassen.destroy',$klas->id) }}" method="POST" style="text-align: center;">
    
-                    <a class="btn btn-info" href="{{ route('klassen.show',$klas->id) }}">Show</a>
+                    <a class="button" href="{{ route('klassen.show',$klas->id) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('klassen.edit',$klas->id) }}">Edit</a>
+                    <a class="button" href="{{ route('klassen.edit',$klas->id) }}">Edit</a>
                     @if ($klas->class_name !== 'Geen klas')
                         @csrf
                         @method('DELETE')
-        
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="button">Delete</button>
                     @endif
                 </form>
-            </th>
+            </td>
         </tr>
         @endforeach
     </table>
