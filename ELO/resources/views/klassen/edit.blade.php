@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Class</h2>
+                <h1>Edit Klas</h1>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('klassen.index') }}"> Back</a>
+                <a class="button" href="{{ route('klassen.index') }}"> Terug</a>
             </div>
         </div>
     </div>
@@ -30,13 +30,13 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Class name:</strong>
-                    <input type="text" name="class_name" value="{{ $klassen->class_name }}" class="form-control" placeholder="Class name">
+                    <strong>Klas naam:</strong>
+                    <input class="w-input" type="text" name="class_name" value="{{ $klassen->class_name }}" class="form-control" placeholder="Class name">
                 </div>
 
 
                 <div class="form-group">
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                <input class="w-input" type="text" id="myInput" onkeyup="myFunction()" placeholder="Zoek voor een student" title="Type in a name">
                     <table id="myTable">
                     <tr>
                         @foreach ($students as $student)
