@@ -4,7 +4,7 @@
     <div class="row">
         <div>
             <div>
-                <h1>Classes</h1>
+                <h1 class="h1-style">Classes</h1>
             </div>
             <div class="pull-right">
                 <a class="button" href="{{ route('klassen.create') }}"> Create New class</a>

@@ -2,8 +2,8 @@
   
 @section('content')
 <div class="row">
-    <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
+    <div>
+        <div>
             <h2>Add New Class</h2>
         </div>
         <div class="pull-right">
