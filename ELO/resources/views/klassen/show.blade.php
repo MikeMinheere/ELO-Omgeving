@@ -25,8 +25,8 @@
 
             @foreach ($students as $student)
             <tr>
-                <th>{{ $student->first_name }} {{ $student->last_name }}</th>
-                <th>{{ $student->student_number }}</th>
+                <td>{{ $student->first_name }} {{ $student->last_name }}</td>
+                <td>{{ $student->student_number }}</td>
             </tr>
             @endforeach
             </table>

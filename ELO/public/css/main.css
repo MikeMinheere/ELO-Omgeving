@@ -99,4 +99,10 @@ body {
     text-decoration: none;
     color: white;
     border-width: 0;
+    font-family: 'Gabarito';
+    font-size: 16px;
+}
+
+.table td {
+    text-align: center;
 }
