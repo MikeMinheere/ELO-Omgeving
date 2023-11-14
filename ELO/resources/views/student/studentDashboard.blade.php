@@ -7,7 +7,7 @@
 <div>Goede studenten, zij maken echt het verschil</div>
 
 <div class="container-button">
-  <a href="#" class="button-3 w-button">OPDRACHTEN</a>
+  <a href="/studentOpdrachten" class="button-3 w-button">OPDRACHTEN</a>
   <a href="#" class="button-3 w-button">ROOSTER</a>
 </div>
 <div class="container-4">
