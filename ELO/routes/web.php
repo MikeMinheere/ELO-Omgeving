@@ -6,6 +6,7 @@ use App\Http\Controllers\KlassenController;
 use App\Models\Klassen;
 use App\Http\Controllers\OpdrachtController;
 use app\Http\Controllers\OpdrachtCreate\OpdrachtenViewController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 
 /*
@@ -19,6 +20,17 @@ use app\Http\Controllers\OpdrachtCreate\OpdrachtenViewController;
 |
 */
 
+
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+ 
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+ 
+    return redirect('/home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::get('/', function () {
     return view('welcome');
