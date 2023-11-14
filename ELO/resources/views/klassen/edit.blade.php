@@ -40,12 +40,19 @@
                     <table id="myTable">
                     <tr>
                         @foreach ($students as $student)
-                    
-                        <tr>
-                            <td>{{ $student->first_name }} {{ $student->last_name }}, {{ $student->student_number }}</td>
-                            <td><input name="user[]" type="checkbox" id="user[]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
-                        </tr>
-
+                        @if($klassen->class_name !== 'Docenten')
+                            @if($student->role !== 'teacher' )
+                                <tr>
+                                    <td>{{ $student->first_name }} {{ $student->last_name }}, {{ $student->student_number }}</td>
+                                    <td><input name="user[]" type="checkbox" id="user[]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
+                                </tr>
+                            @endif
+                        @else
+                            <tr>
+                                <td>{{ $student->first_name }} {{ $student->last_name }}, {{ $student->student_number }}</td>
+                                <td><input name="user[]" type="checkbox" id="user[]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
+                            </tr>
+                        @endif
                         @endforeach
                         </tr>
                         

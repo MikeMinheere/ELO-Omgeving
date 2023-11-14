@@ -108,7 +108,11 @@ class KlassenController extends Controller
                 } else {
                     $klasnaam = $student->class_name;
                 } 
-                $role = $student->role;
+                if($klasnaam !== 'Docenten' ){
+                    $role = 'student';
+                } else {
+                    $role = 'teacher';
+                }
             }
             $student->fill([
                 'id' => $student->id,
