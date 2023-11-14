@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
 
 @section('content')
-<div class="text-block-2">Welkom student</div>
+<div class="text-block-2">Welkom Student</div>
 <div>Goede studenten, zij maken echt het verschil</div>
 
 <div class="container-button">

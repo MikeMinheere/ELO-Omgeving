@@ -80,8 +80,8 @@ body {
 }
 
 .button {
-    text-align: center;
     background-color: #318d7e;
+    text-align: center;
     border-radius: 10px;
     flex-flow: row;
     flex: 0 auto;
@@ -96,11 +96,22 @@ body {
     display: inline-block;
     overflow: visible;
     padding: 9px 15px;
-    text-decoration: none;
     color: white;
     border-width: 0;
     font-family: 'Gabarito';
     font-size: 16px;
+}
+
+.button-opdracht{
+    width: 30%;
+    height: 8em;
+    background-color: #318d7e;
+    font-family: 'Gabarito';
+    font-size: 1em;
+    color: white;
+    border-radius: 1em;
+    border-width: 0;
+    margin: 1em;
 }
 
 .table td {
