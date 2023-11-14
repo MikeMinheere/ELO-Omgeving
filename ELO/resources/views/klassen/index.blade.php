@@ -2,12 +2,13 @@
  
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Classes</h2>
+        <div>
+            <div>
+                <h1>Klassen</h1>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('klassen.create') }}"> Create New class</a>
+                <a class="button" href="dashboardDocent"> Terug</a>
+                <a class="button" style="margin-bottom: 20px;" href="{{ route('klassen.create') }}"> Maak een nieuwe klas</a>
             </div>
         </div>
     </div>
@@ -20,32 +21,31 @@
     
     <table class="table table-bordered">
         <tr>
-            <th>Class name</th>
+            <th>Klas naam</th>
             <th>Aantal leerlingen</th>
-            <th width="280px">Action</th>
         </tr>
 
 
         @foreach ($klassen as $klas)
         <tr>     
-            <th width="280px">{{ $klas->class_name }}</th>
-            <th>{{ $student[$i]->users_count }}</th>
-            <th hidden >{{ ++$i }}</th>
+            <td width="280px">{{ $klas->class_name }}</td>
+            <td>{{ $student[$i]->users_count }}</td>
+            <td hidden >{{ ++$i }}</td>
             
-            <th>
-                <form action="{{ route('klassen.destroy',$klas->id) }}" method="POST">
+            <td>
+                <form action="{{ route('klassen.destroy',$klas->id) }}" method="POST" style="text-align: center;">
    
-                    <a class="btn btn-info" href="{{ route('klassen.show',$klas->id) }}">Show</a>
-    
-                    <a class="btn btn-primary" href="{{ route('klassen.edit',$klas->id) }}">Edit</a>
+                    <a class="button" href="{{ route('klassen.show',$klas->id) }}">Show</a>
                     @if ($klas->class_name !== 'Geen klas')
+                        <a class="button" href="{{ route('klassen.edit',$klas->id) }}">Edit</a>
+                    @endif
+                    @if (($klas->class_name !== 'Geen klas') && ($klas->class_name !== 'Docenten'))
                         @csrf
                         @method('DELETE')
-        
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="button">Verwijder</button>
                     @endif
                 </form>
-            </th>
+            </td>
         </tr>
         @endforeach
     </table>
