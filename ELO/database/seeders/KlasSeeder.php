@@ -14,8 +14,8 @@ class KlasSeeder extends Seeder
     public function run(): void
     {
         DB::table('klassen')->insert([
-            'class_name' => 'Geen klas',
-            'class_name' => 'Docenten',
+            ['class_name' => 'Geen klas'],
+            ['class_name' => 'Docenten']
         ]);
     }
 }
