@@ -16,8 +16,8 @@ class teacher
      */
     public function handle(Request $request, Closure $next): Response
     {
+        //check the role of the logged in user to see if it is a teacher or not, if so, redirect to docenDashboard.
         $user = Auth::user();
-        
         if($user->role == 'teacher' || $user->role == 'admin'){
             return $next($request);
         }

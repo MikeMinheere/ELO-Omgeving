@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('opdracht_toets_type', function (Blueprint $table) {
+        Schema::create('user_opdracht', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer("user_id");
+            $table->integer("opdracht_id");
         });
     }
 
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('opdracht_toets_type');
+        Schema::dropIfExists('user_opdracht');
     }
 };
