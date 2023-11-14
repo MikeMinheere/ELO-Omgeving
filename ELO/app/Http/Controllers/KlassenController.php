@@ -93,19 +93,31 @@ class KlassenController extends Controller
 
         foreach ($students as $student) {
             if (in_array($student->id , $request->get('user'))) {
-                $klasnaam = $klassen->class_name;
                 // Perform actions or logic for checked checkbox
+                $klasnaam = $klassen->class_name;
+                if($klassen->class_name == 'Docenten' ){
+                    $role = 'teacher';
+
+                } else {
+                    $role = 'student';
+                }
             } else {
+                // Perform actions or logic for unchecked checkbox
                 if($student->class_name == $klassen->class_name ){
                     $klasnaam = 'Geen klas';
                 } else {
                     $klasnaam = $student->class_name;
                 } 
-                // Perform actions or logic for unchecked checkbox
+                if($klasnaam !== 'Docenten' ){
+                    $role = 'student';
+                } else {
+                    $role = 'teacher';
+                }
             }
             $student->fill([
                 'id' => $student->id,
-                'class_name' => $klasnaam
+                'class_name' => $klasnaam,
+                'role' => $role
             ]);
 
             $student->save();

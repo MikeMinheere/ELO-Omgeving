@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Show Class</h2>
+                <h1>Klas</h1>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('klassen.index') }}"> Back</a>
+                <a class="button" style="margin-bottom: 10px;" href="{{ route('klassen.index') }}">Terug</a>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Class Name:</strong>
+                <strong>Klas Name:</strong>
                 {{ $klassen->class_name }}
             </div>
 
@@ -25,8 +25,8 @@
 
             @foreach ($students as $student)
             <tr>
-                <th>{{ $student->first_name }} {{ $student->last_name }}</th>
-                <th>{{ $student->student_number }}</th>
+                <td>{{ $student->first_name }} {{ $student->last_name }}</td>
+                <td>{{ $student->student_number }}</td>
             </tr>
             @endforeach
             </table>

@@ -75,6 +75,6 @@ Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtCreate\Opdrachte
 Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenViewController@index');
 
 
-Route::resource('klassen', KlassenController::class);
+Route::resource('klassen', KlassenController::class)->middleware('teacher');
 
 require __DIR__.'/auth.php';
