@@ -2,12 +2,12 @@
    
 @section('content')
     <div class="row">
-        <div>
-            <div>
-                <h2>Edit Class</h2>
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h1>Edit Klas</h1>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('klassen.index') }}"> Back</a>
+                <a class="button" href="{{ route('klassen.index') }}"> Terug</a>
             </div>
         </div>
     </div>
@@ -30,22 +30,29 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Class name:</strong>
-                    <input type="text" name="class_name" value="{{ $klassen->class_name }}" class="form-control" placeholder="Class name">
+                    <strong>Klas naam:</strong>
+                    <input class="w-input" type="text" name="class_name" value="{{ $klassen->class_name }}" class="form-control" placeholder="Class name">
                 </div>
 
 
                 <div class="form-group">
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                <input class="w-input" type="text" id="myInput" onkeyup="myFunction()" placeholder="Zoek voor een student" title="Type in a name">
                     <table id="myTable">
                     <tr>
                         @foreach ($students as $student)
-                    
-                        <tr>
-                            <td>{{ $student->first_name }} {{ $student->last_name }}, {{ $student->student_number }}</td>
-                            <td><input name="user[]" type="checkbox" id="user[]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
-                        </tr>
-
+                        @if($klassen->class_name !== 'Docenten')
+                            @if($student->role !== 'teacher' )
+                                <tr>
+                                    <td>{{ $student->first_name }} {{ $student->last_name }}, {{ $student->student_number }}</td>
+                                    <td><input name="user[]" type="checkbox" id="user[]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
+                                </tr>
+                            @endif
+                        @else
+                            <tr>
+                                <td>{{ $student->first_name }} {{ $student->last_name }}, {{ $student->student_number }}</td>
+                                <td><input name="user[]" type="checkbox" id="user[]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
+                            </tr>
+                        @endif
                         @endforeach
                         </tr>
                         

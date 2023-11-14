@@ -25,7 +25,9 @@
         <!-- Class Name -->
         <select id="class_name" class="w-input" type="select" name="class_name" :value="old('class_name')" placeholder="Class Name" required autofocus autocomplete="class_name">
             @foreach ($classname as $class)
-                <option value="{{ $class->class_name }}">{{ $class->class_name }}</option>
+                @if (($class->class_name !== 'Geen klas') && ($class->class_name !== 'Docenten'))
+                    <option value="{{ $class->class_name }}">{{ $class->class_name }}</option>
+                @endif
             @endforeach
         </select>
 
