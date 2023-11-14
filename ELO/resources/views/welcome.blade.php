@@ -3,7 +3,7 @@
   <div style="width: 1248px; height: 771px; left: 96px; top: 50px; position: absolute; background: linear-gradient(180deg, #318D7E 0%, #8CBE8D 100%); border-radius: 20px"></div>
   <div style="width: 367px; height: 711px; left: 416px; top: 80px; position: absolute; background: white; border-radius: 20px"></div>
   <div style="width: 367px; height: 711px; left: 870px; top: 80px; position: absolute; background: white; border-radius: 20px"></div>
-  <div style="width: 663.59px; height: 201.26px; left: 245.03px; top: 768.20px; position: absolute; transform: rotate(-90.18deg); transform-origin: 0 0; color: white; font-size: 48px; font-family: Inter; font-weight: 600; line-height: 62.40px; word-wrap: break-word">Engels, media & Techniek</div>
+  <div style="width: 663.59px; height: 201.26px; left: 245.03px; top: 768.20px; position: absolute; transform: rotate(-90.18deg); transform-origin: 0 0; color: white; font-size: 48px; font-family: Inter; font-weight: 600; line-height: 62.40px; word-wrap: break-word">Engels Media & Techniek</div>
     <img style="width: 147px; height: 144px; left: 130px; top: 63px; position: absolute" src="image/logo.png" />
     <img style="width: 164px; height: 205px; left: 506px; top: 104px; position: absolute" src="image/manZittend.png" />
     <img style="width: 134px; height: 219px; left: 987px; top: 104px; position: absolute" src="image/vrouwZittend.png" />
