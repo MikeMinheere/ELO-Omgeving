@@ -44,13 +44,13 @@
                             @if($student->role !== 'teacher' )
                                 <tr>
                                     <td>{{ $student->first_name }} {{ $student->last_name }}, {{ $student->student_number }}</td>
-                                    <td><input name="user[]" type="checkbox" id="user[]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
+                                    <td><input name="user[{{ $student->id }}]" type="checkbox" id="user[{{ $student->id }}]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
                                 </tr>
                             @endif
                         @else
                             <tr>
                                 <td>{{ $student->first_name }} {{ $student->last_name }}, {{ $student->student_number }}</td>
-                                <td><input name="user[]" type="checkbox" id="user[]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
+                                <td><input name="user[{{ $student->id }}]" type="checkbox" id="user[{{ $student->id }}]" value="{{ $student->id }}" {{  ($klassen->class_name == $student->class_name ? ' checked' : '') }}/></td>
                             </tr>
                         @endif
                         @endforeach
