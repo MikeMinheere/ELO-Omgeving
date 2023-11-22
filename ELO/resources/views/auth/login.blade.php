@@ -17,7 +17,7 @@
                 <x-text-input id="password" class="w-input"
                                 type="password"
                                 name="password"
-                                placeholder="password"
+                                placeholder="Wachtwoord"
                                 required autocomplete="current-password" />
 
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
@@ -27,7 +27,7 @@
             <div>
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                    <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Onthoud mijn account') }}</span>
                 </label>
             </div>
 
@@ -35,6 +35,6 @@
                     {{ __('Log in') }}
             </x-primary-button>
         </form>
-        <p class="paragraph-2">Not a member? <a href="http://elo.test/register">Sign up now</a></p>
-        <p class="paragraph-2">Forgot your password? <a href="http://elo.test/forgot-password">Click here</a></p>
+        <p class="paragraph-2">Nog geen account? <a href="http://elo.test/register">Registreer hier</a></p>
+        <p class="paragraph-2">Wachtwoord vergeten? <a href="http://elo.test/forgot-password">Klik hier</a></p>
 </x-guest-layout>
