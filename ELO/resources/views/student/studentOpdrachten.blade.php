@@ -16,7 +16,8 @@
 @foreach ($opdrachten as $opdracht)
 <tr>
   <button type="submit" class = "button-opdracht">
-    <td>{{$opdracht ->opdracht_naam}}</td>
+    <td><h2>{{$opdracht ->opdracht_naam}}</h2></td>
+    <td>{{$opdracht ->opdracht_type}}</td>
   </button>
 </tr>
 

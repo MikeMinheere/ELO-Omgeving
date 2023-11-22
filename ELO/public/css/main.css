@@ -112,8 +112,12 @@ body {
     border-radius: 1em;
     border-width: 0;
     margin: 1em;
+    transition: 0.2s;
 }
 
+.button-opdracht:hover{
+    background-color: #266e5c;
+}
 .table td {
     text-align: center;
 }
