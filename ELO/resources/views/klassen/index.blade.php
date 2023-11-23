@@ -6,9 +6,9 @@
             <div>
                 <h1>Klassen</h1>
             </div>
-            <div class="pull-right">
+            <div class="container-button">
                 <a class="button" href="docentDashboard"> Terug</a>
-                <a class="button" style="margin-bottom: 20px;" href="{{ route('klassen.create') }}"> Maak een nieuwe klas</a>
+                <a class="button" href="{{ route('klassen.create') }}"> Maak een nieuwe klas</a>
             </div>
         </div>
     </div>
