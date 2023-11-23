@@ -6,7 +6,7 @@
             <div class="pull-left">
                 <h1>Edit Klas</h1>
             </div>
-            <div class="pull-right">
+            <div class="container-button">
                 <a class="button" href="{{ route('klassen.index') }}"> Terug</a>
             </div>
         </div>

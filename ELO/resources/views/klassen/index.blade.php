@@ -34,7 +34,6 @@
             
             <td>
                 <form action="{{ route('klassen.destroy',$klas->id) }}" method="POST" style="text-align: center;">
-   
                     <a class="button" href="{{ route('klassen.show',$klas->id) }}">Show</a>
                     @if ($klas->class_name !== 'Geen klas')
                         <a class="button" href="{{ route('klassen.edit',$klas->id) }}">Edit</a>
