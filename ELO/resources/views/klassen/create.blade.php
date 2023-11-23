@@ -7,7 +7,7 @@
             <h2>Maak een nieuwe klas aan</h2>
         </div>
         <div class="pull-right">
-            <a class="button" style="margin-bottom: 10px;" href="{{ route('klassen.index') }}"> Back</a>
+            <a class="button" style="margin-bottom: 10px;" href="{{ route('klassen.index') }}"> Terug</a>
         </div>
     </div>
 </div>
@@ -34,9 +34,8 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="button">Submit</button>
+            <button class ="button" type="submit">Maak klas</button>
         </div>
     </div>
-   
 </form>
 @endsection

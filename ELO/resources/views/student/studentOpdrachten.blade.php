@@ -12,16 +12,16 @@
 </div>
 @endif
 
+<div class = "div-opdracht">
 @foreach ($opdrachten as $opdracht)
 <tr>
-  
-<div style="width:300px; height:70px; background-color:318D7E; margin-top:20px; margin-bottom:20px; border-radius:10px;text-align:center; color:ffffff">
-
-<td>{{$opdracht ->opdracht_naam}}</td>
-</div>
-
+  <button type="submit" class = "button-opdracht">
+    <td><h2>{{$opdracht ->opdracht_naam}}</h2></td>
+    <td>{{$opdracht ->opdracht_type}}</td>
+  </button>
 </tr>
 
 @endforeach
+</div>
 
 @endsection
