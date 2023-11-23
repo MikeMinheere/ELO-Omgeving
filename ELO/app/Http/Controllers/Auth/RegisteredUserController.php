@@ -52,7 +52,7 @@ class RegisteredUserController extends Controller
             'student_number' => $request->student_number,
             'class_name' => $request->class_name,
             'password' => Hash::make($request->password),
-            'role' => $request->role, 
+            'role' => "student", 
         ]);
 
         
