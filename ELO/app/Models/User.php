@@ -9,9 +9,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory,Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -59,3 +59,6 @@ class User extends Authenticatable
         return $this->belongsToMany(Opdracht::class, 'student_number', 'student_number');
     }
 }
+
+
+
