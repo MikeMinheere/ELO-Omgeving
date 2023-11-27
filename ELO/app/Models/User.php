@@ -53,4 +53,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Klassen::class, 'class_name', 'class_name');
     }
+
+    public function opdracht() 
+    {
+        return $this->belongsToMany(Opdracht::class, 'student_number', 'student_number');
+    }
 }
