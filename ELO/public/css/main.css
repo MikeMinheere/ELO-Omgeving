@@ -127,7 +127,7 @@ body {
     transition: 0.2s;
 }
 
-.button-opdracht:hover{
+.button-opdracht:hover, .button:hover{
     background-color: var(--button-hover);
 }
 .table td {

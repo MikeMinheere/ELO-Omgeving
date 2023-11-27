@@ -7,10 +7,17 @@
 @if(Auth::user()->role == "teacher")
     
 <div class="container-button">
+  <a href="/docentDashboard" class="button">Dashboard</a>
   <a href="/docentOpdrachtCreate" class="button">Opdracht aanmaken</a>
+</div>
+
+@else
+<div class="container-button">
   <a href="/docentDashboard" class="button">Dashboard</a>
 </div>
 @endif
+
+
 
 <div class = "div-opdracht">
 @foreach ($opdrachten as $opdracht)
