@@ -14,8 +14,12 @@
 </head>
 
 <body>
-    <h1>Maak een nieuwe opdracht:</h1>
-    <form action = "/createOpdracht" method = "post" class="form-group" style="width:70%; margin-left:15%;">
+  <div class="container-button">
+    <a href="/docentDashboard" class="button">Dashboard</a>
+    <a href="/studentOpdrachten" class="button">Terug</a>
+  </div>
+  <form action = "/createOpdracht" method = "post" class="form-group" style="width:70%; margin-left:15%;">
+        <h2>Maak een nieuwe opdracht:</h2>
 
         <input type="hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
         <label>Opdrachtnaam:</label>
