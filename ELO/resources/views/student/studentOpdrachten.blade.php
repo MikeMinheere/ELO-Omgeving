@@ -1,16 +1,23 @@
 @extends('layouts.app')
 
-<link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+<link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
 @section('content'i )
 
 @if(Auth::user()->role == "teacher")
     
 <div class="container-button">
-  <a href="/docentOpdrachtenCreate" class="button-3 w-button">Aanmaken</a>
-  <a href="/docentDashboard" class="button-3 w-button">🔙</a>
+  <a href="/docentDashboard" class="button">Dashboard</a>
+  <a href="/docentOpdrachtCreate" class="button">Opdracht aanmaken</a>
+</div>
+
+@else
+<div class="container-button">
+  <a href="/docentDashboard" class="button">Dashboard</a>
 </div>
 @endif
+
+<div class = "div-opdracht">
 
 @foreach ($opdrachten as $opdracht)
 <tr>

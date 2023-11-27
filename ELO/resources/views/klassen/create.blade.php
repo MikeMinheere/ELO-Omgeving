@@ -6,7 +6,7 @@
         <div class="pull-left">
             <h2>Maak een nieuwe klas aan</h2>
         </div>
-        <div class="pull-right">
+        <div class="container-button">
             <a class="button" style="margin-bottom: 10px;" href="{{ route('klassen.index') }}"> Terug</a>
         </div>
     </div>
