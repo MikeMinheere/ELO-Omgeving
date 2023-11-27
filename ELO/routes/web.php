@@ -7,6 +7,7 @@ use App\Models\Klassen;
 use App\Http\Controllers\OpdrachtController;
 use app\Http\Controllers\OpdrachtCreate\OpdrachtenViewController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\UploadController;
 
 
 /*
@@ -76,5 +77,12 @@ Route::get('view-Opdracht','App\Http\Controllers\OpdrachtCreate\OpdrachtenViewCo
 
 
 Route::resource('klassen', KlassenController::class)->middleware('teacher');
+
+
+Route::get('/test', function () {
+    return view('test');
+});
+Route::post('file-upload', [UploadController::class, 'FileUpload' ])->name('FileUpload');
+
 
 require __DIR__.'/auth.php';
