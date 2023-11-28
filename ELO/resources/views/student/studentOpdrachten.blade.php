@@ -17,7 +17,6 @@
   <tr>
     <a href="{{ route('opdracht.createAnswer',$opdracht->id) }}" class = "button-opdracht">
       <td><h2>{{$opdracht ->opdracht_naam}}</h2></td>
-      <td><h3>{{$opdracht ->opdracht_beschrijving}}</h3></td>
       <td>{{$opdracht ->opdracht_type}}</td>
     </a>
   </tr>
