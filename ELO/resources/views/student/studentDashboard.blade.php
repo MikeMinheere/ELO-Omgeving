@@ -7,7 +7,7 @@
 <div>Goede studenten, zij maken echt het verschil</div>
 
 <div class="container-button">
-  <a href="/studentOpdrachten" class="button">Opdrachten</a>
+  <a href="{{route('opdracht.index')}}"  class="button">Opdrachten</a>
   <a href="#" class="button">Rooster</a>
 </div>
 <div class="container-4">

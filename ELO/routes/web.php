@@ -54,12 +54,6 @@ Route::get('/studentDashboard', function () {
     return view('student/studentDashboard');
 });
 
-Route::get('/studentOpdrachten', function () {
-    return view('student/studentOpdrachten');
-});
-
-Route::resource('studentOpdrachten', OpdrachtenController::class);
-
 
 
 Route::middleware('auth')->group(function () {
@@ -78,7 +72,7 @@ Route::get('view-Opdracht','App\Http\Controllers\OpdrachtenController@index');
 
 Route::resource('klassen', KlassenController::class)->middleware('teacher');
 
-Route::resource('opdrachten', OpdrachtenController::class);
+//Route::resource('opdrachten', OpdrachtenController::class);
 
 
 Route::get('/test', function () {
@@ -86,8 +80,11 @@ Route::get('/test', function () {
 });
 Route::post('file-upload', [UploadController::class, 'FileUpload' ])->name('FileUpload');
 
-Route::get('/student/opdracht', function () {
-    return view('opdracht');
-});
+
+
+Route::resource('studentOpdrachten', OpdrachtenController::class);
+Route::get('/student/opdrachten', [OpdrachtenController::class, 'index'])->name('opdracht.index');
+Route::get('/student/opdracht/{opdracht_id}', [OpdrachtenController::class, 'createAnswer'])->name('opdracht.createAnswer');
+Route::post('/student/opdracht/{opdracht_id}', [OpdrachtenController::class, 'storeAnswer'])->name('opdracht.storeAnswer');
 
 require __DIR__.'/auth.php';

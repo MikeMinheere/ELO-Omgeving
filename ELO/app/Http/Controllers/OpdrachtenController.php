@@ -53,9 +53,20 @@ class OpdrachtenController extends Controller
         return view('opdrachten/opdrachtenDocent');
     }
 
-    public function createAnswer()
+    public function createAnswer($opdracht_id)
     {
-        return view('opdrachten');
+        $opdracht = Opdracht::find($opdracht_id);
+        return view('opdrachten.createAnswer')->with('opdracht',$opdracht);
+    }
+
+    public function storeAnswer($opdracht_id)
+    {
+        //make model for answer instead of opdracht
+        $newOpdracht = new Opdracht();
+        $newOpdracht->
+        dd('hoi');
+        //$opdracht = Opdracht::find($opdracht_id);
+        //return view('opdrachten.createAnswer')->with('opdracht',$opdracht);
     }
 
     /**
