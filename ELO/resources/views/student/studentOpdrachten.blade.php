@@ -14,7 +14,7 @@
 
 @foreach ($opdrachten as $opdracht)
 <tr>
-  <a href="/opdracht,$opdracht ->id " class = "button-opdracht">
+  <a href="{{ route('opdrachten.createAnswer',$opdracht->id) }}" class = "button-opdracht">
     <td><h2>{{$opdracht ->opdracht_naam}}</h2></td>
     <td>{{$opdracht ->opdracht_type}}</td>
   </a>
