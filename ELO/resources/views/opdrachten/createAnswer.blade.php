@@ -8,9 +8,10 @@
   <a href="{{route('opdracht.index')}}" class="button">Terug</a>
 </div>
 <h1>{{$opdracht->opdracht_naam}}</h1>
+<h2>{{$opdracht->opdracht_beschrijving}}</h2>
 <form action="{{route('opdracht.storeAnswer',$opdracht->id)}}" method="post">
   @csrf
-  <textarea rows="20" cols=""></textarea>
+  <textarea rows="10" cols="100"></textarea>
   <button type="submit" class="button">Inleveren</button>
 </form>
 

@@ -114,20 +114,19 @@ body {
 }
 
 .button-opdracht{
-    text-align: center;
-    padding-top: 1%;
     display:block;
-    width: 30%;
-    height: 8rem;
+    text-align: center;
+    width: 32%;
+    height: 10rem;
     background-color: var(--button-color);
     font-family: 'Gabarito';
     font-size: 1rem;
     color: var(--text-color);
     border-radius: 1em;
     border-width: 0;
-    margin: 0rem;
     text-decoration: none;
     transition: 0.2s;
+    margin-bottom: 1.5rem;
 }
 
 .button-opdracht:hover, .button:hover{
@@ -145,6 +144,10 @@ h1 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+
+h2 {
+    font-size: 1.4rem;
 }
 
 .w-input, .w-select {
@@ -169,8 +172,6 @@ h1 {
     align-items: stretch;
     margin: 20px auto 20px 0;
     display: flex;
-    
-
 }
 
 .text-block-2 {
@@ -194,6 +195,8 @@ h1 {
 }
 
 .div-opdracht{
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
