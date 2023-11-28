@@ -3,6 +3,17 @@
     box-sizing: border-box;
 }
 
+/*variables are defined here*/
+:root{
+    --button-color: #318d7e;
+    --button-hover: #266e5c;
+    --text-color: #fff;
+    --bg-gradient-1: #318d7e;
+    --bg-gradient-2: #8cbe8d;
+    --main-section-color: #ffffff;
+    --body-color: #fff;
+}
+
 /* Setting a background color */
 body {
     font-family: 'Gabarito';
@@ -10,11 +21,12 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
+    background-color: var(--body-colorf);
 }
 
 .container-main {
     background-color: #000;
-    background-image: linear-gradient(#318d7e, #8cbe8d);
+    background-image: linear-gradient(var(--bg-gradient-1), var(--bg-gradient-2));
     border-radius: 15px;
     margin: 15px;
     width: 80%;
@@ -60,9 +72,9 @@ body {
     background-color: #000;
     border-radius: 10px;
     justify-content: center;
-    font-size: 13px;
+    font-size: 1rem;
     display: flex;
-    color: #fff;
+    color: var(--text-color);
     padding: 15px 15px;
     text-decoration: none;
 }
@@ -73,15 +85,15 @@ body {
 }
 
 .section-main {
-    background-color: #fff;
+    background-color: var(--main-section-color);
     border-radius: 10px;
     padding: 30px;
     margin-bottom: 30px;
 }
 
 .button {
-    background-color: #318d7e;
     text-align: center;
+    background-color:  var(--button-color);
     border-radius: 10px;
     flex-flow: row;
     flex: 0 auto;
@@ -93,30 +105,30 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     line-height: 20px;
-    display: inline-block;
+    display: flex;
     overflow: visible;
     padding: 9px 15px;
-    color: white;
-    border-width: 0;
-    font-family: 'Gabarito';
-    font-size: 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.2s;
 }
 
 .button-opdracht{
     width: 30%;
-    height: 8em;
-    background-color: #318d7e;
+    height: 8rem;
+    background-color: var(--button-color);
     font-family: 'Gabarito';
-    font-size: 1em;
-    color: white;
+    font-size: 1rem;
+    color: var(--text-color);
     border-radius: 1em;
     border-width: 0;
-    margin: 1em;
+    margin: 1rem;
+    text-decoration: none;
     transition: 0.2s;
 }
 
-.button-opdracht:hover{
-    background-color: #266e5c;
+.button-opdracht:hover, .button:hover{
+    background-color: var(--button-hover);
 }
 .table td {
     text-align: center;
@@ -141,4 +153,39 @@ h1 {
     margin-bottom: 10px;
     padding: 8px 12px;
     font-size: 16px;
+}
+.container-button {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    flex-flow: row;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    align-content: space-around;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 20px auto 20px 0;
+    display: flex;
+    
+
+}
+
+.text-block-2 {
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.container-4 {
+    max-width: none;
+    align-items: stretch;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+}
+
+.image-3 {
+    width: auto;
+    height: auto;
+    max-width: 15em;
+    object-fit: fill;
 }
