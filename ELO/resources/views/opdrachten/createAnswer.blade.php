@@ -4,8 +4,8 @@
 
 @section('content')
 <div class="container-button">
-  <a href="/docentDashboard" class="button">Dashboard</a>
-  <a href="/studentOpdrachten" class="button">Terug</a>
+  <a href="{{route('docent.dashboard')}}" class="button">Dashboard</a>
+  <a href="{{route('opdracht.index')}}" class="button">Terug</a>
 </div>
 <h1>{{$opdracht->opdracht_naam}}</h1>
 <form action="{{route('opdracht.storeAnswer',$opdracht->id)}}" method="post">

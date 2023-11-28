@@ -43,12 +43,12 @@ Route::get('/opdrachtenDocent', function () {
 
 Route::get('/docentOpdrachtCreate', function () {
     return view('docent/docentOpdrachtCreate');
-});
+})->name('docent.createAssignment');
 
 
 Route::get('/docentDashboard', function () {
     return view('docent/docentDashboard');
-})->middleware('teacher');
+})->middleware('teacher')->name('docent.dashboard');
 
 Route::get('/studentDashboard', function () {
     return view('student/studentDashboard');

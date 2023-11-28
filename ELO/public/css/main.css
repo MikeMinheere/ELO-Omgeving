@@ -92,6 +92,8 @@ body {
 }
 
 .button {
+    border: none;
+    outline: none;
     text-align: center;
     background-color:  var(--button-color);
     border-radius: 10px;
@@ -112,6 +114,9 @@ body {
 }
 
 .button-opdracht{
+    text-align: center;
+    padding-top: 1%;
+    display:block;
     width: 30%;
     height: 8rem;
     background-color: var(--button-color);
@@ -120,7 +125,7 @@ body {
     color: var(--text-color);
     border-radius: 1em;
     border-width: 0;
-    margin: 1rem;
+    margin: 0rem;
     text-decoration: none;
     transition: 0.2s;
 }
@@ -186,4 +191,9 @@ h1 {
     height: auto;
     max-width: 15em;
     object-fit: fill;
+}
+
+.div-opdracht{
+    display: flex;
+    justify-content: space-between;
 }

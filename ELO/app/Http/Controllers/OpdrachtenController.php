@@ -63,7 +63,7 @@ class OpdrachtenController extends Controller
     {
         //make model for answer instead of opdracht
         $newOpdracht = new Opdracht();
-        $newOpdracht->
+        $newOpdracht->$opdracht_naam;
         dd('hoi');
         //$opdracht = Opdracht::find($opdracht_id);
         //return view('opdrachten.createAnswer')->with('opdracht',$opdracht);
