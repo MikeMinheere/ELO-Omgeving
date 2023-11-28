@@ -64,7 +64,11 @@ class ProfileController extends Controller
     public function imageUploadPost(Request $request): RedirectResponse
     {
         $imagelocation = Auth::user()->image;
-        Storage::delete($imagelocation);
+
+        if ($imagelocation !== 'profileimage\default.png'){
+            Storage::delete($imagelocation);
+        }
+        
         
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
