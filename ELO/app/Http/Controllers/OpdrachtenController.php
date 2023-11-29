@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Opdracht;
+use App\Models\Answer;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -59,14 +60,18 @@ class OpdrachtenController extends Controller
         return view('opdrachten.createAnswer')->with('opdracht',$opdracht);
     }
 
-    public function storeAnswer($opdracht_id)
-    {
+    public function storeAnswer(Request $request, $opdracht_id)
+    {   
+        $opdracht = Opdracht::find($opdracht_id);
         //make model for answer instead of opdracht
-        $newOpdracht = new Opdracht();
-        $newOpdracht->$opdracht_naam;
-        dd('hoi');
+        $newAnswer=new Answer();
+        $newAnswer->opdracht_id = $opdracht->id;
+        $newAnswer->opdracht_answer = $request->get('answer');
+        $newAnswer->user_id = Auth()->user()->id;
+        $newAnswer->save();
+
         //$opdracht = Opdracht::find($opdracht_id);
-        //return view('opdrachten.createAnswer')->with('opdracht',$opdracht);
+        return view('docent/docentDashboard');
     }
 
     /**

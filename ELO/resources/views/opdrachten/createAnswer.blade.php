@@ -11,7 +11,7 @@
 <h2>{{$opdracht->opdracht_beschrijving}}</h2>
 <form action="{{route('opdracht.storeAnswer',$opdracht->id)}}" method="post">
   @csrf
-  <textarea rows="10" cols="100"></textarea>
+  <textarea rows="10" cols="100" name="answer" id="answer"></textarea>
   <button type="submit" class="button">Inleveren</button>
 </form>
 
