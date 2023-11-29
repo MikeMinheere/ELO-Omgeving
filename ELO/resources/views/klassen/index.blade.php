@@ -7,8 +7,8 @@
                 <h1>Klassen</h1>
             </div>
             <div class="container-button">
-                <a class="button" href="docentDashboard"> Terug</a>
-                <a class="button" href="{{ route('klassen.create') }}"> Maak een nieuwe klas</a>
+                <a class="button" href="{{route('docent.dashboard')}}"> Dashboard</a>
+                <a class="button" href="{{route('klassen.create')}}"> Maak een nieuwe klas</a>
             </div>
         </div>
     </div>

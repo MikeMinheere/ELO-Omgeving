@@ -14,16 +14,20 @@
 </head>
 
 <body>
-    <h1>Maak een nieuwe opdracht:</h1>
-    <form action = "/createOpdracht" method = "post" class="form-group" style="width:70%; margin-left:15%;">
+  <div class="container-button">
+    <a href="/docentDashboard" class="button">Dashboard</a>
+    <a href="/studentOpdrachten" class="button">Terug</a>
+  </div>
+  <form action = "/createOpdracht" method = "post" class="form-group" style="width:50%;">
+        <h2>Maak een nieuwe opdracht:</h2>
 
         <input type="hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
         <label>Opdrachtnaam:</label>
         <input type="text" class="form-control" placeholder="Opdrachtnaam" name="opdracht naam" required autofocus autocomplete="opdracht_naam">
         <br>
 
-        <label>Beschrijving:</label>
-        <input type="text" class="form-control" placeholder="Opdrachtbeschrijving" name="opdracht beschrijving" required autofocus autocomplete="opdracht_beschrijving">
+        <label>Opdracht inhoud:</label>
+        <input type="text" class="form-control" placeholder="Opdracht inhoud" name="opdracht beschrijving" required autofocus autocomplete="opdracht_beschrijving">
         <br>
 
         <label>Opdracht type:</label><br>

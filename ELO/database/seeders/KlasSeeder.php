@@ -15,7 +15,8 @@ class KlasSeeder extends Seeder
     {
         DB::table('klassen')->insert([
             ['class_name' => 'Geen klas'],
-            ['class_name' => 'Docenten']
+            ['class_name' => 'Docenten'],
+            ['class_name' => 'MBIAO21A5']
         ]);
     }
 }
