@@ -21,7 +21,8 @@ return new class extends Migration
             $table->integer('student_number')->unique();
             $table->string('class_name')->index();
             $table->string('password');
-            $table->string('role')->default('student')  ;
+            $table->string('image')->default('profileimage\default.png')->nullable();
+            $table->string('role')->default('student');
             $table->rememberToken();
             $table->timestamps();
 
