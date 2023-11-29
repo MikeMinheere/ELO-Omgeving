@@ -23,13 +23,14 @@ class OpdrachtenController extends Controller
     }
 
     public function insert(Request $request){
-        $opdrachten_naam = $request->input('opdracht_naam');
-        $opdracht_beschrijving = $request->input('opdracht_beschrijving');
-        $opdracht_type = $request->input('opdracht_type');
+        $newOpdracht = new Opdracht();
+        $newOpdracht->opdracht_naam = $request->input('opdracht_naam');
+        $newOpdracht->opdracht_beschrijving = $request->input('opdracht_beschrijving');
+        $newOpdracht->opdracht_type = $request->input('opdracht_type');
+        $newOpdracht->user_id = Auth()->user()->id;
     
         // Check if the record already exists
-        //$opdracht = DB::table('opdrachten')->where('opdracht_naam', $opdrachten_naam)->first();
-        $opdracht = Opdracht::where('opdracht_naam', $opdrachten_naam)->first();
+        $opdracht = Opdracht::where('opdracht_naam', $newOpdracht->opdracht_naam)->first();
     
         // If the record exists, you can choose to update it or do nothing
         if ($opdracht) {
@@ -38,8 +39,7 @@ class OpdrachtenController extends Controller
             return redirect()->back()->with('error', 'Opdracht with this name already exists.');
         } else {
             // Record doesn't exist, insert a new one
-            $data = array("opdracht_naam" => $opdrachten_naam, "opdracht_beschrijving" => $opdracht_beschrijving, "opdracht_type" => $opdracht_type);
-            DB::table('opdrachten')->insert($data);
+            $newOpdracht->save();
     
             // You can also redirect back with a success message
             return redirect()->to('/studentOpdrachten');
@@ -70,8 +70,7 @@ class OpdrachtenController extends Controller
         $newAnswer->user_id = Auth()->user()->id;
         $newAnswer->save();
 
-        //$opdracht = Opdracht::find($opdracht_id);
-        return view('docent/docentDashboard');
+        return view('docent/docentDashboard')->with('success','Answer submitted successfully');
     }
 
     /**
