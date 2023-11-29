@@ -6,9 +6,9 @@
             <div>
                 <h1>Klassen</h1>
             </div>
-            <div class="pull-right">
+            <div class="container-button">
                 <a class="button" href="docentDashboard"> Terug</a>
-                <a class="button" style="margin-bottom: 20px;" href="{{ route('klassen.create') }}"> Maak een nieuwe klas</a>
+                <a class="button" href="{{ route('klassen.create') }}"> Maak een nieuwe klas</a>
             </div>
         </div>
     </div>
@@ -34,7 +34,6 @@
             
             <td>
                 <form action="{{ route('klassen.destroy',$klas->id) }}" method="POST" style="text-align: center;">
-   
                     <a class="button" href="{{ route('klassen.show',$klas->id) }}">Show</a>
                     @if ($klas->class_name !== 'Geen klas')
                         <a class="button" href="{{ route('klassen.edit',$klas->id) }}">Edit</a>

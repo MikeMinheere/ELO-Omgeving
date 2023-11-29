@@ -11,15 +11,9 @@ class Opdracht extends Model
 
     protected $fillable = [
         'opdracht_naam',
-        'student_number',
+        'user_id',
         'opdracht_beschrijving',
         'opdracht_type',
     ];
-
-    public function users(): BelongsToMany
-    {
-        return $this->belongsToMany(User::class, 'student_number', 'student_number');
-    }
-
     protected $table = "opdrachten";
 }
