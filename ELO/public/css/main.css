@@ -200,3 +200,7 @@ h2 {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+h6{
+    color: #7c7c7c;
+}

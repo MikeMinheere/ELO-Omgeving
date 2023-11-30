@@ -26,7 +26,7 @@ class OpdrachtenController extends Controller
         $newOpdracht = new Opdracht();
         $newOpdracht->opdracht_naam = $request->input('opdracht_naam');
         $newOpdracht->opdracht_beschrijving = $request->input('opdracht_beschrijving');
-        $newOpdracht->opdracht_type = $request->input('opdracht_type');
+        $newOpdracht->opdracht_type = "opdracht"; //dit is tijdelijk, wil eerst opdrachtvragen maken zonder verschillende types
         $newOpdracht->user_id = Auth()->user()->id;
     
         // Check if the record already exists
@@ -71,6 +71,10 @@ class OpdrachtenController extends Controller
         $newAnswer->save();
 
         return view('docent/docentDashboard')->with('success','Answer submitted successfully');
+    }
+
+    public function addQuestion($opdracht_id){
+        
     }
 
     /**

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id()->index();
             $table->string('opdracht_id');
             $table->integer('user_id')->nullable();
-            $table->string('opdracht_answer');
+            $table->array('opdracht_answer');
             $table->timestamps();
         });
     }
