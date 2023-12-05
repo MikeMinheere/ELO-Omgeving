@@ -9,7 +9,7 @@
             <div class="row mb-3">
                 <div class="col-sm-9">
                     <label for="file-upload" class="custom-file-upload">
-                    <i style="padding-bottom: 10px"  class="fa fa-user"></i> Klik hier
+                    <i style="padding-bottom: 10px"  class="fa fa-user"></i> Drop image
                     </label>
                     <input type="file" id="file-upload" name="image" @error('image') is-invalid @enderror id="selectImage">
                 </div>
