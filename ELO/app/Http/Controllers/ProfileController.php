@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use App\Models\User;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\file;
 
 class ProfileController extends Controller
 {
@@ -66,7 +66,9 @@ class ProfileController extends Controller
         $imagelocation = Auth::user()->image;
 
         if ($imagelocation !== 'profileimage\default.png'){
-            Storage::delete($imagelocation);
+            if(File::exists($imagelocation)) {
+                File::delete($imagelocation);
+            }
         }
         
         
