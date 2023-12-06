@@ -74,7 +74,7 @@ class OpdrachtenController extends Controller
     }
 
     public function addQuestion($opdracht_id){
-        
+        return view('docent/docentOpdrachtCreate');
     }
 
     /**

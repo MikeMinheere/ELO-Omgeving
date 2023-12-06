@@ -18,7 +18,7 @@
     <a href="/docentDashboard" class="button">Dashboard</a>
     <a href="/studentOpdrachten" class="button">Terug</a>
   </div>
-  <div class="div-opdracht">
+  <div class="div-create-opdracht">
     <form action = "/createOpdracht" method = "post" class="form-group" style="width:45%;">
       <h2>Maak een nieuwe opdracht*:</h2>
 
