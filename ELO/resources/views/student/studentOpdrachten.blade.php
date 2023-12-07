@@ -20,7 +20,7 @@
       <td>{{$opdracht ->opdracht_type}}</td>
     </a>
   </tr>
-  @endforeach
+  @endforeach 
 </div>
 
 @endsection
