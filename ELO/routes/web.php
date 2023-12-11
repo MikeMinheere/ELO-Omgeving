@@ -69,9 +69,7 @@ Route::middleware('auth')->group(function () {
 # Routes voor de opdrachten aanmaken / view
 Route::get('add-Opdracht','App\Http\Controllers\OpdrachtenController@create');
 Route::post('createOpdracht','App\Http\Controllers\OpdrachtenController@insert');
-Route::post('createOpdrachtText','App\Http\Controllers\OpdrachtenController@insert');
-Route::post('createOpdrachtToets','App\Http\Controllers\OpdrachtenController@insert');
-
+Route::post('addQuestion','App\Http\Controllers\OpdrachtenController@addQuestion');
 Route::get('view-Opdracht','App\Http\Controllers\OpdrachtenController@index');
 
 
