@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\User;
+use Illuminate\Support\Facades\file;
 
 class ProfileController extends Controller
 {
@@ -56,5 +58,33 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+
+
+    public function imageUploadPost(Request $request): RedirectResponse
+    {
+        $imagelocation = Auth::user()->image;
+
+        if ($imagelocation !== 'profileimage\default.png'){
+            if(File::exists($imagelocation)) {
+                File::delete($imagelocation);
+            }
+        }
+        
+        
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+    
+        $imageName = Auth::user()->first_name.Auth::user()->last_name.'.'.$request->image->extension();  
+     
+        $request->image->move(public_path('profileimage'), $imageName);
+
+        User::where('id', Auth::id())
+       ->update([
+           'image' => 'profileimage/' . $imageName
+        ]);
+
+        return Redirect::route('profile.edit')->with('status', 'profile-updated', Auth::user()->image);
     }
 }

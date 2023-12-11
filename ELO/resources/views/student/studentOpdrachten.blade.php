@@ -7,21 +7,20 @@
 @if(Auth::user()->role == "teacher")
     
 <div class="container-button">
-  <a href="/docentOpdrachtCreate" class="button-3 w-button">Opdracht aanmaken</a>
-  <a href="/docentDashboard" class="button-3 w-button">Dashboard</a>
+  <a href="{{route('docent.dashboard')}}" class="button">Dashboard</a>
+  <a href="{{route('docent.createAssignment')}}" class="button">Opdracht aanmaken</a>
 </div>
 @endif
 
+<div class="div-opdracht">
 @foreach ($opdrachten as $opdracht)
-<tr>
-  
-<div style="width:300px; height:70px; background-color:318D7E; margin-top:20px; margin-bottom:20px; border-radius:10px;text-align:center; color:ffffff">
-
-<td>{{$opdracht ->opdracht_naam}}</td>
+  <tr>
+    <a href="{{ route('opdracht.createAnswer',$opdracht->id) }}" class = "button-opdracht">
+      <td><h2>{{$opdracht ->opdracht_naam}}</h2></td>
+      <td>{{$opdracht ->opdracht_type}}</td>
+    </a>
+  </tr>
+  @endforeach 
 </div>
-
-</tr>
-
-@endforeach
 
 @endsection

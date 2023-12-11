@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('opdrachten', function (Blueprint $table) {
+        Schema::create('opdracht_answer', function (Blueprint $table) {
             $table->id()->index();
+            $table->string('opdracht_id');
             $table->integer('user_id')->nullable();
-            $table->string('opdracht_naam')->unique();
-            $table->string('opdracht_beschrijving');
-            $table->string('opdracht_type');
+            $table->array('opdracht_answer');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('opdrachten');
+        Schema::dropIfExists('opdracht_answer');
     }
 };
